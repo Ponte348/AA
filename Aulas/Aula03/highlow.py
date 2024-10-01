@@ -36,7 +36,7 @@ def mid(ntimes, low, high):
 def main():
     low = 1
     high = 1000
-    ntimes = 50
+    ntimes = 100000
     
     min, median, mean, max, guesses = mid(ntimes, low, high)
     
