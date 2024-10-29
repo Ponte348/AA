@@ -50,21 +50,22 @@ def throw_n_biased_coins(n, p):
 def main():
     print()
     
-    print("Probabilities for 3 throws:")
-    for k, v in throw_three_coins().items():
-        print(f"Number of heads: {k}, Probability: {v/1000000*100:.2f}%")
+    #print("Probabilities for 3 throws:")
+    #for k, v in throw_three_coins().items():
+    #    print(f"Number of heads: {k}, Probability: {v/1000000*100:.2f}%")
 
     print()
     
-    #print("Probabilities for 10 throws:")
-    #for k, v in throw_n_coins(10).items():
-    #    print(f"Number of heads: {k}, Probability: {v/1000000*100:.2f}%")
+    print("Probability for num of heads 6 for 15 throws:")
+    for k, v in throw_n_coins(15).items():
+        if k==6:
+            print(f"Number of heads: {k}, Probability: {v/1000000*100:.2f}%")
         
     print()
 
-    print("Probabilities for 3 throws with 2/3 of heads:")
-    for k, v in throw_n_biased_coins(3, 2/3).items():
-        print(f"Number of heads: {k}, Probability: {v/1000000*100:.2f}%")
+    #print("Probabilities for 3 throws with 2/3 of heads:")
+    #for k, v in throw_n_biased_coins(3, 2/3).items():
+    #    print(f"Number of heads: {k}, Probability: {v/1000000*100:.2f}%")
 
 if __name__ == "__main__":
     main()
