@@ -1,80 +1,121 @@
+import random
 import networkx as nx
 import matplotlib
-matplotlib.use('Agg')  # Use Agg backend instead of TkAgg
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from collections import defaultdict
 
-def find_minimum_cut(G):
-    """
-    Find the minimum cut in an undirected graph using NetworkX.
-    Returns the cut value and the two sets of nodes.
-    """
-    if not nx.is_connected(G):
-        return 0, [], []  # If graph is not connected, min cut is 0
+from utils import *
+
+def minimum_cut_phase(G, a):
+    """Implementation of MINIMUMCUTPHASE from the paper"""
+    A = {a}
+    vertices_order = [a]
+    weights = defaultdict(int)
     
-    # Convert G to an undirected graph if it isn't already
-    if not G.is_directed():
-        G = G.copy()
+    # Initialize weights for vertices connected to a
+    for _, v, w in G.edges(a, data='weight', default=1):
+        weights[v] = w
     
-    # Get the cut value and partition using stoer_wagner algorithm
-    cut_value, partition = nx.stoer_wagner(G)
-    set_a, set_b = partition
+    remaining_vertices = set(G.nodes()) - A
+    while remaining_vertices:
+        # Find most tightly connected vertex
+        max_weight = -float('inf')
+        next_vertex = None
+        
+        for v in remaining_vertices:
+            w = weights[v]
+            if w > max_weight:
+                max_weight = w
+                next_vertex = v
+        
+        # Add vertex to A
+        A.add(next_vertex)
+        vertices_order.append(next_vertex)
+        remaining_vertices.remove(next_vertex)
+        
+        # Update weights for remaining vertices
+        for _, v, w in G.edges(next_vertex, data='weight', default=1):
+            if v in remaining_vertices:
+                weights[v] += w
     
-    return cut_value, list(set_a), list(set_b)
+    s, t = vertices_order[-2:]
+    cut_weight = sum(w for _, v, w in G.edges(t, data='weight', default=1))
+    
+    return cut_weight, s, t, vertices_order
+
+def merge_vertices(G, s, t):
+    """Merge vertices s and t in graph G"""
+    new_vertex = f"{s}-{t}"
+    G.add_node(new_vertex)
+    
+    for v in G.neighbors(s):
+        if v != t:
+            w_sv = G.edges[s, v].get('weight', 1)
+            w_tv = G.edges[t, v]['weight'] if G.has_edge(t, v) else 0
+            G.add_edge(new_vertex, v, weight=w_sv + w_tv)
+    
+    for v in G.neighbors(t):
+        if v != s and not G.has_edge(new_vertex, v):
+            w_tv = G.edges[t, v].get('weight', 1)
+            G.add_edge(new_vertex, v, weight=w_tv)
+    
+    G.remove_nodes_from([s, t])
+    return new_vertex
+
+def minimum_cut(G, starting_vertex=None):
+    """Find the minimum cut in the graph"""
+    if not starting_vertex:
+        starting_vertex = list(G.nodes())[0]
+    
+    G = G.copy()
+    min_cut_weight = float('inf')
+    min_cut_partition = None
+    original_nodes = {v: {v} for v in G.nodes()}  # Track original nodes
+    
+    while len(G) > 1:
+        cut_weight, s, t, vertex_order = minimum_cut_phase(G, starting_vertex)
+        
+        if cut_weight < min_cut_weight:
+            min_cut_weight = cut_weight
+            
+            # Reconstruct the partition using original nodes
+            merged_nodes = set()
+            for v in vertex_order[:-1]:  # All nodes except last
+                merged_nodes.update(original_nodes[v])
+            min_cut_partition = (list(merged_nodes), 
+                               list(original_nodes[vertex_order[-1]]))
+        
+        # Merge vertices
+        new_vertex = merge_vertices(G, s, t)
+        # Update tracking of original nodes
+        original_nodes[new_vertex] = original_nodes[s].union(original_nodes[t])
+        del original_nodes[s]
+        del original_nodes[t]
+        
+        if starting_vertex in (s, t):
+            starting_vertex = new_vertex
+    
+    return min_cut_weight, min_cut_partition
 
 def main():
-    # Create a sample graph
-    G = nx.Graph()
+    # Generate random graph
+    n_vertices = 10  # Keep it small for better visualization
+    m_edges = 20 # Max value: n_vertices * (n_vertices - 1) / 2
     
-    # Add edges with weights
-    edges = [
-        (0, 1, 2),  # (node1, node2, weight)
-        (0, 2, 3),
-        (1, 3, 2),
-        (2, 3, 1)
-    ]
+    # Generate a random graph
+    G = generate_random_graph(n_vertices, m_edges)
     
-    G.add_weighted_edges_from(edges)
+    # Use NetworkX's implementation of Stoer-Wagner
+    cut_value, partition = nx.stoer_wagner(G)
     
-    # Find minimum cut
-    cut_value, set_a, set_b = find_minimum_cut(G)
+    # Print information about the cut
+    print_cut_info(cut_value, partition, G)
     
-    print(f"Minimum cut value: {cut_value}")
-    print(f"Set A: {set_a}")
-    print(f"Set B: {set_b}")
-    
-    # Visualize the graph and the cut
-    pos = nx.spring_layout(G)
-    
-    plt.figure(figsize=(8, 6))
-    
-    # Draw the nodes
-    nx.draw_networkx_nodes(G, pos, nodelist=set_a, node_color='lightblue', 
-                          node_size=500, label='Set A')
-    nx.draw_networkx_nodes(G, pos, nodelist=set_b, node_color='lightgreen', 
-                          node_size=500, label='Set B')
-    
-    # Draw edges
-    cut_edges = [(u, v) for u in set_a for v in set_b if G.has_edge(u, v)]
-    normal_edges = [(u, v) for (u, v) in G.edges() if (u, v) not in cut_edges and (v, u) not in cut_edges]
-    
-    # Draw normal edges
-    nx.draw_networkx_edges(G, pos, edgelist=normal_edges, edge_color='gray')
-    # Draw cut edges in red
-    nx.draw_networkx_edges(G, pos, edgelist=cut_edges, edge_color='red', width=2)
-    
-    # Add labels
-    nx.draw_networkx_labels(G, pos)
-    edge_labels = nx.get_edge_attributes(G, 'weight')
-    nx.draw_networkx_edge_labels(G, pos, edge_labels)
-    
-    plt.title(f"Minimum Cut = {cut_value}")
-    plt.legend()
-    plt.axis('off')
-    
-    # Save the plot instead of showing it
-    plt.savefig('mincut_graph.png')
+    # Visualize the result
+    visualize_cut(G, partition, cut_value)
     print("\nGraph visualization has been saved as 'mincut_graph.png'")
-    plt.close()
-
+    
+    
 if __name__ == "__main__":
     main()
