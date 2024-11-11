@@ -37,9 +37,10 @@ def exhaustive_min_cut(G):
 def greedy_min_cut(G):
     n = G.number_of_nodes()
     
-    # Start with all nodes in set_a except the last one
-    set_a = list(range(n-1))
-    set_b = [n-1]
+    # Start with roughly balanced partitions
+    mid = n // 2
+    set_a = list(range(mid))
+    set_b = list(range(mid, n))
     best_cut_size = sum(1 for v1 in set_a for v2 in set_b if G.has_edge(v1, v2))
     best_partition = (set_a.copy(), set_b.copy())
     
@@ -52,10 +53,12 @@ def greedy_min_cut(G):
         
         # Try moving each vertex from one set to another
         for v in range(n):
-            if v in set_a:
+            if v in set_a and len(set_a) > 1:  # Ensure set_a doesn't become empty
                 source, dest = set_a, set_b
-            else:
+            elif v in set_b and len(set_b) > 1:  # Ensure set_b doesn't become empty
                 source, dest = set_b, set_a
+            else:
+                continue
                 
             # Calculate gain of moving vertex v
             old_edges = sum(1 for u in dest if G.has_edge(v, u))

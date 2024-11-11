@@ -10,7 +10,7 @@ def generate_graph(nodes, edge_prob):
 
     # probability of rewiring each edge
     p = edge_prob
-    # seed is NMec multiplied by a random prime number
+    # using seed to ensure I always get the same graph
     seed = 98059  
     graph = nx.connected_watts_strogatz_graph(nodes, k, p, seed)
     return graph
