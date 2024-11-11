@@ -1,0 +1,66 @@
+Ficheiro com métricas -> Lossy Counter(0.1) - Gonçalo Freitas (98012)
+
+Ficheiro: all
+Média: 11214.09090909091
+Variância: 1256885598.628099
+Desvio Padrão: 35452.582397169586
+Máximo Desvio: 112110.90909090909
+Desvio absoluto médio: 20383.801652892565
+Erro quadrático médio: 2263631671.4545455
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 9.09 %
+Número de posições corretas no ranking: 1
+Nº letras: 11
+Valor máximo do contador: [123325, 10]
+Valor mínimo do contador: [1, 98570]
+Tempo de execução: 0.2657778263092041 (s)
+
+Ficheiro: cesario_verde
+Média: 3098.6666666666665
+Variância: 14721673.333333334
+Desvio Padrão: 3836.883283777777
+Máximo Desvio: 6311.333333333334
+Desvio absoluto médio: 3482.6666666666674
+Erro quadrático médio: 5521185.222222222
+Exatidão em contadores: 4.0 %
+Número de contadores com valores corretos: 1
+Exatidão Ranking de letras: 77.78 %
+Número de posições corretas no ranking: 7
+Nº letras: 9
+Valor máximo do contador: [9410, 3]
+Valor mínimo do contador: [1, 6731]
+Tempo de execução: 0.01799631118774414 (s)
+
+Ficheiro: lusiadas
+Média: 11914.125
+Variância: 237274311.609375
+Desvio Padrão: 15403.710968769019
+Máximo Desvio: 22393.875
+Desvio absoluto médio: 14827.90625
+Erro quadrático médio: 111510825.625
+Exatidão em contadores: 4.17 %
+Número de contadores com valores corretos: 1
+Exatidão Ranking de letras: 50.0 %
+Número de posições corretas no ranking: 4
+Nº letras: 8
+Valor máximo do contador: [34308, 1]
+Valor mínimo do contador: [1, 24707]
+Tempo de execução: 0.0660099983215332 (s)
+
+Ficheiro: the_expedition_of_humphry_clinker
+Média: 5864.714285714285
+Variância: 446758097.91836745
+Desvio Padrão: 21136.652949754545
+Máximo Desvio: 76209.28571428571
+Desvio absoluto médio: 10887.040816326535
+Erro quadrático médio: 413147136.0
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 14.29 %
+Número de posições corretas no ranking: 2
+Nº letras: 14
+Valor máximo do contador: [82074, 3]
+Valor mínimo do contador: [1, 67129]
+Tempo de execução: 0.18479585647583008 (s)
+

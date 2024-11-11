@@ -1,0 +1,31 @@
+Ficheiro para estimação de tempo - Gonçalo Freitas 98012
+
+Nº of letters: 1000
+Exact counter time: 0.010391500080004334 (s)
+Probabilistic counter time: 0.08799570007249713 (s)
+Lossy counter time: 0.0014136999379843473 (s)
+
+Nº of letters: 10000
+Exact counter time: 0.02097980002872646 (s)
+Probabilistic counter time: 0.7766457000980154 (s)
+Lossy counter time: 0.004415000090375543 (s)
+
+Nº of letters: 100000
+Exact counter time: 0.04281929996795952 (s)
+Probabilistic counter time: 6.720932199968956 (s)
+Lossy counter time: 0.060293099959380925 (s)
+
+Nº of letters: 1000000
+Exact counter time: 0.297984900069423 (s)
+Probabilistic counter time: 71.85790770000312 (s)
+Lossy counter time: 0.59488769993186 (s)
+
+Nº of letters: 10000000
+Exact counter time: 2.6432206999743357 (s)
+Probabilistic counter time: 667.4582836999325 (s)
+Lossy counter time: 4.5411697999807075 (s)
+
+Nº of letters: 100000000
+Exact counter time: 24.851058100000955 (s)
+Probabilistic counter time: 6506.611075599911 (s)
+Lossy counter time: 41.674260600004345 (s)

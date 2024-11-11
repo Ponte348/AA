@@ -1,0 +1,66 @@
+Ficheiro com métricas -> Lossy Counter(0.01) - Gonçalo Freitas (98012)
+
+Ficheiro: all
+Média: 44097.22727272727
+Variância: 990654257.2665291
+Desvio Padrão: 31474.660558400454
+Máximo Desvio: 79235.77272727274
+Desvio absoluto médio: 26349.086776859513
+Erro quadrático médio: 2751229.409090909
+Exatidão em contadores: 69.23 %
+Número de contadores com valores corretos: 18
+Exatidão Ranking de letras: 95.45 %
+Número de posições corretas no ranking: 21
+Nº letras: 22
+Valor máximo do contador: [123333, 0]
+Valor mínimo do contador: [1, 9856]
+Tempo de execução: 0.15003323554992676 (s)
+
+Ficheiro: cesario_verde
+Média: 2889.1304347826085
+Variância: 6961147.678638941
+Desvio Padrão: 2638.398695921248
+Máximo Desvio: 6521.869565217392
+Desvio absoluto médio: 2033.9735349716445
+Erro quadrático médio: 8351.04347826087
+Exatidão em contadores: 68.0 %
+Número de contadores com valores corretos: 17
+Exatidão Ranking de letras: 95.65 %
+Número de posições corretas no ranking: 22
+Nº letras: 23
+Valor máximo do contador: [9411, 0]
+Valor mínimo do contador: [1, 672]
+Tempo de execução: 0.011002302169799805 (s)
+
+Ficheiro: lusiadas
+Média: 11024.727272727272
+Variância: 97887290.92561984
+Desvio Padrão: 9893.800630982001
+Máximo Desvio: 23283.272727272728
+Desvio absoluto médio: 7656.950413223138
+Erro quadrático médio: 279351.9090909091
+Exatidão em contadores: 70.83 %
+Número de contadores com valores corretos: 17
+Exatidão Ranking de letras: 95.45 %
+Número de posições corretas no ranking: 21
+Nº letras: 22
+Valor máximo do contador: [34308, 0]
+Valor mínimo do contador: [1, 2470]
+Tempo de execução: 0.03800821304321289 (s)
+
+Ficheiro: the_expedition_of_humphry_clinker
+Média: 30169.409090909092
+Variância: 416178897.0599173
+Desvio Padrão: 20400.463157975537
+Máximo Desvio: 51905.59090909091
+Desvio absoluto médio: 17715.02892561984
+Erro quadrático médio: 964501.7727272727
+Exatidão em contadores: 80.77 %
+Número de contadores com valores corretos: 21
+Exatidão Ranking de letras: 100.0 %
+Número de posições corretas no ranking: 22
+Nº letras: 22
+Valor máximo do contador: [82075, 0]
+Valor mínimo do contador: [1, 6712]
+Tempo de execução: 0.11002516746520996 (s)
+

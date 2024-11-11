@@ -1,0 +1,66 @@
+Ficheiro com métricas -> Probabilistic Counter(k = 8, n = 10) - Gonçalo Freitas (98012)
+
+Ficheiro: all
+Média: 37803.92307692308
+Variância: 1050740950.6863908
+Desvio Padrão: 32415.13459306302
+Máximo Desvio: 86637.07692307692
+Desvio absoluto médio: 26956.213017751485
+Erro quadrático médio: 987650.3846153846
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 69.23 %
+Número de posições corretas no ranking: 18
+Nº letras: 26
+Valor máximo do contador: 124441
+Valor mínimo do contador: 1664
+Tempo de execução: 3.926232099533081 (s)
+
+Ficheiro: cesario_verde
+Média: 2735.8
+Variância: 6646616.16
+Desvio Padrão: 2578.1032097260963
+Máximo Desvio: 6147.2
+Desvio absoluto médio: 2036.4160000000008
+Erro quadrático médio: 62358.28
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 68.0 %
+Número de posições corretas no ranking: 17
+Nº letras: 25
+Valor máximo do contador: 8883
+Valor mínimo do contador: 25
+Tempo de execução: 0.2710609436035156 (s)
+
+Ficheiro: lusiadas
+Média: 10242.833333333334
+Variância: 94546550.05555554
+Desvio Padrão: 9723.505029337699
+Máximo Desvio: 24137.166666666664
+Desvio absoluto médio: 7551.236111111113
+Erro quadrático médio: 213473.58333333334
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 75.0 %
+Número de posições corretas no ranking: 18
+Nº letras: 24
+Valor máximo do contador: 34380
+Valor mínimo do contador: 25
+Tempo de execução: 0.9642183780670166 (s)
+
+Ficheiro: the_expedition_of_humphry_clinker
+Média: 25928.5
+Variância: 463788554.09615386
+Desvio Padrão: 21535.750604428762
+Máximo Desvio: 57706.5
+Desvio absoluto médio: 18246.076923076922
+Erro quadrático médio: 721109.5
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 88.46 %
+Número de posições corretas no ranking: 23
+Nº letras: 26
+Valor máximo do contador: 83635
+Valor mínimo do contador: 256
+Tempo de execução: 2.6458325386047363 (s)
+

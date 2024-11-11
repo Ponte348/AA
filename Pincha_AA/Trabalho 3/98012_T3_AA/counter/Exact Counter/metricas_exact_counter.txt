@@ -1,0 +1,46 @@
+Ficheiro com métricas -> Exact Counter - Gonçalo Freitas (98012)
+
+Ficheiro: all
+Média: 37912.07692307692
+Variância: 1048828957.147929
+Desvio Padrão: 32385.62886756916
+Máximo Desvio: 85420.92307692308
+Desvio absoluto médio: 27045.248520710054
+Nº letras: 26
+Valor máximo do contador: 123333
+Valor mínimo do contador: 1539
+Tempo de execução: 0.14541912078857422 (s)
+
+Ficheiro: cesario_verde
+Média: 2692.88
+Variância: 6846161.785599999
+Desvio Padrão: 2616.5171097472303
+Máximo Desvio: 6718.12
+Desvio absoluto médio: 2041.705599999999
+Nº letras: 25
+Valor máximo do contador: 9411
+Valor mínimo do contador: 4
+Tempo de execução: 0.010001659393310547 (s)
+
+Ficheiro: lusiadas
+Média: 10295.166666666666
+Variância: 95520018.97222222
+Desvio Padrão: 9773.43434889815
+Máximo Desvio: 24012.833333333336
+Desvio absoluto médio: 7660.263888888887
+Nº letras: 24
+Valor máximo do contador: 34308
+Valor mínimo do contador: 8
+Tempo de execução: 0.03300642967224121 (s)
+
+Ficheiro: the_expedition_of_humphry_clinker
+Média: 25819.53846153846
+Variância: 456482765.0177516
+Desvio Padrão: 21365.457285481898
+Máximo Desvio: 56255.46153846154
+Desvio absoluto médio: 18210.508875739637
+Nº letras: 26
+Valor máximo do contador: 82075
+Valor mínimo do contador: 276
+Tempo de execução: 0.09001994132995605 (s)
+

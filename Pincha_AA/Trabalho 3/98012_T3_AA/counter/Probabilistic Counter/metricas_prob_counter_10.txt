@@ -1,0 +1,66 @@
+Ficheiro com métricas -> Probabilistic Counter(10) - Gonçalo Freitas (98012)
+
+Ficheiro: all
+Média: 37858.5
+Variância: 1043846745.7884616
+Desvio Padrão: 32308.617206381048
+Máximo Desvio: 85065.5
+Desvio absoluto médio: 27012.923076923078
+Erro quadrático médio: 32707.03846153846
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 92.31 %
+Número de posições corretas no ranking: 24
+Nº letras: 26
+Valor máximo do contador: 122924
+Valor mínimo do contador: 1577
+Tempo de execução: 4.045007705688477 (s)
+
+Ficheiro: cesario_verde
+Média: 2689.24
+Variância: 6812549.702400002
+Desvio Padrão: 2610.0861484633033
+Máximo Desvio: 6722.76
+Desvio absoluto médio: 2040.5887999999995
+Erro quadrático médio: 938.36
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 92.0 %
+Número de posições corretas no ranking: 23
+Nº letras: 25
+Valor máximo do contador: 9412
+Valor mínimo do contador: 3
+Tempo de execução: 0.2870638370513916 (s)
+
+Ficheiro: lusiadas
+Média: 10253.125
+Variância: 94102834.609375
+Desvio Padrão: 9700.661555243281
+Máximo Desvio: 23641.875
+Desvio absoluto médio: 7614.385416666667
+Erro quadrático médio: 17725.958333333332
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 91.67 %
+Número de posições corretas no ranking: 22
+Nº letras: 24
+Valor máximo do contador: 33895
+Valor mínimo do contador: 10
+Tempo de execução: 1.0293519496917725 (s)
+
+Ficheiro: the_expedition_of_humphry_clinker
+Média: 25807.384615384617
+Variância: 455576798.6213017
+Desvio Padrão: 21344.24509373198
+Máximo Desvio: 56317.61538461538
+Desvio absoluto médio: 18186.55029585799
+Erro quadrático médio: 13614.76923076923
+Exatidão em contadores: 0.0 %
+Número de contadores com valores corretos: 0
+Exatidão Ranking de letras: 100.0 %
+Número de posições corretas no ranking: 26
+Nº letras: 26
+Valor máximo do contador: 82125
+Valor mínimo do contador: 271
+Tempo de execução: 2.7554843425750732 (s)
+

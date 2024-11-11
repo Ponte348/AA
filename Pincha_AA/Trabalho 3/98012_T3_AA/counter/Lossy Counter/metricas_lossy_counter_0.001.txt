@@ -1,0 +1,66 @@
+Ficheiro com métricas -> Lossy Counter(0.001) - Gonçalo Freitas (98012)
+
+Ficheiro: all
+Média: 37909.53846153846
+Variância: 1048959742.6331362
+Desvio Padrão: 32387.64799477011
+Máximo Desvio: 85423.46153846153
+Desvio absoluto médio: 27047.201183431953
+Erro quadrático médio: 0.0
+Exatidão em contadores: 92.31 %
+Número de contadores com valores corretos: 24
+Exatidão Ranking de letras: 100.0 %
+Número de posições corretas no ranking: 26
+Nº letras: 26
+Valor máximo do contador: [123333, 0]
+Valor mínimo do contador: [1539, 0]
+Tempo de execução: 0.1294715404510498 (s)
+
+Ficheiro: cesario_verde
+Média: 2803.3333333333335
+Variância: 6826382.055555552
+Desvio Padrão: 2612.734593401242
+Máximo Desvio: 6607.666666666666
+Desvio absoluto médio: 2025.5277777777785
+Erro quadrático médio: 0.6666666666666666
+Exatidão em contadores: 92.0 %
+Número de contadores com valores corretos: 23
+Exatidão Ranking de letras: 100.0 %
+Número de posições corretas no ranking: 24
+Nº letras: 24
+Valor máximo do contador: [9411, 0]
+Valor mínimo do contador: [16, 54]
+Tempo de execução: 0.009002923965454102 (s)
+
+Ficheiro: lusiadas
+Média: 10742.434782608696
+Variância: 94871892.85444234
+Desvio Padrão: 9740.220369911676
+Máximo Desvio: 23565.565217391304
+Desvio absoluto médio: 7565.49716446125
+Erro quadrático médio: 2.782608695652174
+Exatidão em contadores: 95.83 %
+Número de contadores com valores corretos: 23
+Exatidão Ranking de letras: 100.0 %
+Número de posições corretas no ranking: 23
+Nº letras: 23
+Valor máximo do contador: [34308, 0]
+Valor mínimo do contador: [368, 0]
+Tempo de execução: 0.03300762176513672 (s)
+
+Ficheiro: the_expedition_of_humphry_clinker
+Média: 25808.846153846152
+Variância: 457031560.97633135
+Desvio Padrão: 21378.29649378854
+Máximo Desvio: 56266.153846153844
+Desvio absoluto médio: 18218.73372781064
+Erro quadrático médio: 0.0
+Exatidão em contadores: 92.31 %
+Número de contadores com valores corretos: 24
+Exatidão Ranking de letras: 100.0 %
+Número de posições corretas no ranking: 26
+Nº letras: 26
+Valor máximo do contador: [82075, 0]
+Valor mínimo do contador: [1, 670]
+Tempo de execução: 0.0890200138092041 (s)
+

@@ -1,0 +1,33 @@
+_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%
+Explicação do cabeçalho
+Ks -> Tamanho de conjuntos dominantes analisados correspondente ao valor de Size(i)
+Operacoes -> Número de operações correspondente ao par (K, Size)
+Tempo -> Tempo de execução correspondente ao par (K, Size) 
+Solutions -> Conjunto dominante minimo
+Check_if_correct -> Verificar se é realmente um conjunto dominante, 1(V) 0(F) -1(se não foi encontrado nenhum set)
+Nota: Na divisão -> Parâmetros correspondentes ao K que retornou solução <- caso exista o valor 0 nas variaveis Ks_solutions, Operacoes, Tempo, N_configurations, Solutions quer dizer que não foi encontra nenhuma solução (0 é o valor default) 
+Nº de configurações analisadas para cada valor de K = min(N_combinações, 1000);
+_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%_%
+
+
+%Todos os parâmetros
+Size =13;
+Ks =[1, 2, 3, 4];
+Operacoes =[229, 1236, 4675, 153];
+Tempos_tentados =[0.0004118999931961298, 0.0012459999998100102, 0.003915100009180605, 0.00044099999649915844];
+N_Configurations =[13, 78, 286, 9];
+
+%Parâmetros correspondentes ao K que retornou solução
+Ks_solution =[4];
+Operacoes =[153];
+Tempo =[0.00044099999649915844];
+N_Configurations =[9];
+Solutions =[{0, 9, 3, 7}];
+Check_if_correct =[1];
+
+%Parâmetros para gráficos
+Total_operacoes =[6293];
+Total_configurations =[386];
+Total_time =[0.006013999998685904];
+
+Size of dominating set returned by nX function: 4
