@@ -1,109 +1,77 @@
-import random
 import networkx as nx
-import matplotlib
-matplotlib.use('Agg')  # Use Agg backend instead of TkAgg
 import matplotlib.pyplot as plt
 
-def generate_random_graph(n, m):
-    """Generate a graph with n nodes and m edges with random weights"""
-    G = nx.Graph()
-    nodes = list(range(n))
-    
-    # Add n nodes
-    G.add_nodes_from(nodes)
-    
-    # Add m random edges with random weights
-    for _ in range(m):
-        u, v = random.sample(nodes, 2)
-        weight = random.randint(1, 10)
-        G.add_edge(u, v, weight=weight)
-    
-    return G
+def generate_graph(nodes, edge_prob):
+    # k is the number of nearest neighbors each node is connected to
+    # k must be even and less than nodes
+    k = min(nodes-1, max(2, int(edge_prob * nodes)))
+    if k % 2 == 1:
+        k -= 1
 
-def visualize_cut(G, partition, cut_value):
-    """Visualize the graph with the minimum cut"""
-    plt.figure(figsize=(15, 10))
+    # probability of rewiring each edge
+    p = edge_prob
+    # seed is NMec multiplied by a random prime number
+    seed = 98059  
+    graph = nx.connected_watts_strogatz_graph(nodes, k, p, seed)
+    return graph
+
+
+def generate_graph_random_regular(nodes, degree):
+    """
+    Creates a random regular graph where each node has exactly the same degree.
+    degree must be less than nodes and nodes * degree must be even
+    """
+    if degree >= nodes:
+        degree = nodes - 1
+    if (nodes * degree) % 2 == 1:
+        degree -= 1
+    graph = nx.random_regular_graph(degree, nodes, seed=98059)
+    return graph
+
+def generate_graph_powerlaw_cluster(nodes, m, p):
+    """
+    Creates a graph using the Holme and Kim algorithm for growing graphs with powerlaw
+    degree distribution and approximate average clustering.
+    m: number of random edges to add for each new node
+    p: probability of adding a triangle after adding a random edge
+    """
+    if m >= nodes:
+        m = nodes - 1
+    seed = 98059
+    graph = nx.powerlaw_cluster_graph(nodes, m, p, seed)
+    return graph
+
+def visualize_and_save_graph(G, filename="graph.png"):
+    plt.figure(figsize=(10,10))
     
-    # Use a different layout for large graphs
-    if len(G) > 100:
-        pos = nx.kamada_kawai_layout(G)
-    else:
-        pos = nx.spring_layout(G)
-    
-    # Draw nodes with smaller size for large graphs
-    node_size = 500 if len(G) < 50 else 50
-    
-    # Draw nodes
-    nx.draw_networkx_nodes(G, pos, nodelist=partition[0], node_color='lightblue', 
-                          node_size=node_size, label='Set A')
-    nx.draw_networkx_nodes(G, pos, nodelist=partition[1], node_color='lightgreen', 
-                          node_size=node_size, label='Set B')
-    
-    # Draw edges
-    cut_edges = [(u, v) for u in partition[0] for v in partition[1] if G.has_edge(u, v)]
-    normal_edges = [e for e in G.edges() if e not in cut_edges and (e[1], e[0]) not in cut_edges]
-    
-    nx.draw_networkx_edges(G, pos, edgelist=normal_edges, edge_color='gray', alpha=0.2)
-    nx.draw_networkx_edges(G, pos, edgelist=cut_edges, edge_color='red', width=2)
-    
-    # Add labels only for small graphs
-    if len(G) < 50:
-        nx.draw_networkx_labels(G, pos)
-        edge_labels = nx.get_edge_attributes(G, 'weight')
-        nx.draw_networkx_edge_labels(G, pos, edge_labels)
-    
-    plt.title(f"Minimum Cut = {cut_value}\nSet A size: {len(partition[0])}, Set B size: {len(partition[1])}")
-    plt.legend()
-    plt.axis('off')
-    plt.savefig('mincut_graph.png', dpi=300, bbox_inches='tight')
-    plt.close()
-    
-# Print a graph be exporting it to a file using matplotlib
-def print_graph(G, filename):
+    # Get position of nodes
     pos = nx.spring_layout(G)
     
-    plt.figure(figsize=(8, 6))
+    # Draw nodes
+    nx.draw_networkx_nodes(G, pos, node_color='lightblue', 
+                          node_size=500)
     
-    # Draw the nodes
-    nx.draw_networkx_nodes(G, pos, node_size=500)
-    
-    # Draw the edges
+    # Draw edges
     nx.draw_networkx_edges(G, pos)
     
-    # Draw the edge labels
-    edge_labels = {(u, v): d['weight'] for u, v, d in G.edges(data=True)}
+    # Draw node labels
+    nx.draw_networkx_labels(G, pos)
+    
+    # Draw edge labels (weights)
+    edge_labels = nx.get_edge_attributes(G, 'weight')
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels)
     
     plt.axis('off')
-    plt.savefig(filename)
+    plt.savefig(filename, bbox_inches='tight')
     plt.close()
 
-def print_cut_info(cut_value, partition, G):
-    """Print information about the cut"""
-    print(f"Minimum cut value: {cut_value}")
-    print(f"Set A size: {len(partition[0])}")
-    print(f"Set B size: {len(partition[1])}")
+def main():
+    # Example usage
+    n = 15  # number of nodes
+    #m = 45  # number of edges
+    m_prob = 0.4 # probability of edge creation
+    random_graph = generate_graph(n, m_prob)
+    visualize_and_save_graph(random_graph, "random_graph.png")
     
-    # Print the actual cut edges
-    cut_edges = [(u, v) for u in partition[0] for v in partition[1] if G.has_edge(u, v)]
-    print("\nCut edges:")
-    for u, v in cut_edges:
-        weight = G[u][v]['weight']
-        print(f"Edge {u}-{v} with weight {weight}")
-    
-    # Optional: print actual sets only if they're small
-    if len(G) < 100:
-        print(f"\nSet A: {partition[0]}")
-        print(f"Set B: {partition[1]}")
-
-
-
-
-
-
-
-if __name__ == '__main__':        
-    # Generate a random graph
-    G = generate_random_graph(10, 20)
-    print_graph(G, 'random_graph.png')
-    
+if __name__ == "__main__":
+    main()
