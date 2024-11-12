@@ -3,7 +3,7 @@ def exhaustive_min_cut(G):
     min_cut = float('inf')
     best_partition = None
 
-    for i in range(1, 2**(n-1)):
+    for i in range(1, 2**(n-1)): # O(2^n)
         # Convert number to binary to represent partitions
         partition = bin(i)[2:].zfill(n)
         
@@ -17,13 +17,13 @@ def exhaustive_min_cut(G):
         set_b = []
         
         # Split vertices into sets
-        for v in range(n):
+        for v in range(n): # O(n)
             if partition[v] == '0':
                 set_a.append(v)
             else:
                 set_b.append(v)
                 
-        for v1 in set_a:
+        for v1 in set_a: # O(n^2)
             for v2 in set_b:
                 if G.has_edge(v1, v2):
                     cut_size += 1
@@ -46,13 +46,13 @@ def greedy_min_cut(G):
     
     # Maximum number of iterations = number of nodes
     # since we can't improve more times than we have nodes
-    for _ in range(n):
+    for _ in range(n): # O(n)
         current_best_gain = 0
         best_vertex = None
         best_source = None
         
         # Try moving each vertex from one set to another
-        for v in range(n):
+        for v in range(n): # O(n)
             if v in set_a and len(set_a) > 1:
                 source, dest = set_a, set_b
             elif v in set_b and len(set_b) > 1:
@@ -61,8 +61,8 @@ def greedy_min_cut(G):
                 continue
                 
             # Calculate gain of moving vertex v
-            old_edges = sum(1 for u in dest if G.has_edge(v, u))
-            new_edges = sum(1 for u in source if G.has_edge(v, u))
+            old_edges = sum(1 for u in dest if G.has_edge(v, u)) # O(n)
+            new_edges = sum(1 for u in source if G.has_edge(v, u)) # O(n)
             gain = old_edges - new_edges
             
             if gain > current_best_gain:
@@ -82,7 +82,7 @@ def greedy_min_cut(G):
             set_b.remove(best_vertex)
             set_a.append(best_vertex)
             
-        current_cut_size = sum(1 for v1 in set_a for v2 in set_b if G.has_edge(v1, v2))
+        current_cut_size = sum(1 for v1 in set_a for v2 in set_b if G.has_edge(v1, v2)) # O(n^2)
         if current_cut_size < best_cut_size:
             best_cut_size = current_cut_size
             best_partition = (set_a.copy(), set_b.copy())
