@@ -39,7 +39,7 @@ def test_greedy_min_cut(n, m_prob, graph):
 def main():
     n = 10  # number of nodes
     m_prob = 0.75 # probability of edge creation
-    random_graph = generate_graph(n, m_prob)
+    random_graph = generate_graph_powerlaw_cluster(n, 3, 0.5)
     
     # Visualize the graph
     #visualize_and_save_graph(random_graph, "random_graph.png")
