@@ -115,7 +115,7 @@ def main():
                                        filename=f"randomized_greedy_min_cut_{n}_nodes.png")
 
     # Generate execution time plots for randomized algorithms
-    node_range = range(10, 75, 1)  # Range of nodes for testing
+    node_range = range(10, 100, 1)  # Range of nodes for testing
     generate_execution_time_plot(randomized_exhaustive_min_cut, "Randomized Exhaustive", node_range, edge_prob,
                                  max_time, max_iterations, "randomized_exhaustive")
     generate_execution_time_plot(randomized_greedy_min_cut, "Randomized Greedy", node_range, edge_prob,
