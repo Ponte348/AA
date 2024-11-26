@@ -72,30 +72,30 @@ def randomized_greedy_min_cut(G, max_time=60, max_iterations=1000, max_attempts_
     global_best_partition = None
     start_time = time.time()
 
-    # Change tested_starts to a defaultdict to track attempts
-    tested_starts = defaultdict(int)  # Tracks the number of times each start_config is tested
+    # tested_starts to track attempts
+    tested_starts = defaultdict(int)  # tracks the number of times each start_config is tested
 
     for iteration in range(max_iterations):
-        # Check time limit
+
         if time.time() - start_time >= max_time:
             break
 
-        # Generate random initial partition
+        # random initial partition
         partition_size = random.randint(n // 3, 2 * n // 3)  # Keep it somewhat balanced
         initial_set_a = set(random.sample(range(n), partition_size))
         start_config = tuple(sorted(initial_set_a))
 
-        # Skip if we've tried this starting point too many times
+        # skip if we've tried this starting point too many times
         if tested_starts[start_config] >= max_attempts_per_start:
             continue
 
-        # Increment the count for this start_config
+        # increment start_config
         tested_starts[start_config] += 1
 
         set_a = list(initial_set_a)
         set_b = list(set(range(n)) - initial_set_a)
 
-        # Calculate the initial cut size
+        # initial cut size
         best_cut_size = 0
         for v1 in set_a:
             for v2 in set_b:
@@ -105,7 +105,7 @@ def randomized_greedy_min_cut(G, max_time=60, max_iterations=1000, max_attempts_
 
         best_partition = (set_a.copy(), set_b.copy())
 
-        # Random number of improvement attempts
+        # rand num of improvement attempts
         improvement_attempts = random.randint(n // 2, n * 2)
 
         for attempt in range(improvement_attempts):
@@ -134,17 +134,17 @@ def randomized_greedy_min_cut(G, max_time=60, max_iterations=1000, max_attempts_
                     candidates.append((gain, v, source))
                     current_best_gain = gain
 
-            # If no improvement possible, possibly continue with small probability
+            # if no improvement possible, possibly continue with small probability
             if not candidates or current_best_gain <= 0:
                 if random.random() >= 0.1:  # 90% chance to break
                     break
                 continue
 
-            # Randomly select from top candidates
+            # randomly select from top candidates
             top_candidates = [c for c in candidates if c[0] == current_best_gain]
             gain, best_vertex, best_source = random.choice(top_candidates)
 
-            # Make the move
+            # make the move
             if best_source == set_a:
                 set_a.remove(best_vertex)
                 set_b.append(best_vertex)
@@ -152,7 +152,7 @@ def randomized_greedy_min_cut(G, max_time=60, max_iterations=1000, max_attempts_
                 set_b.remove(best_vertex)
                 set_a.append(best_vertex)
 
-            # Calculate the current cut size
+            # current cut size
             current_cut_size = 0
             for v1 in set_a:
                 for v2 in set_b:
