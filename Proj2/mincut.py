@@ -1,131 +1,98 @@
-from utils import *
-from rand_algorithms import *
-from time import perf_counter_ns
-import numpy as np
+from rand_algorithms import karger_min_cut, run_karger_multiple_times, stoer_wagner_min_cut
+from utils import generate_graph_erdos_renyi, visualize_and_save_graph
+from time import perf_counter
 import matplotlib.pyplot as plt
 
 
-def test_randomized_exhaustive_min_cut(n, graph, max_time=60, max_iterations=1000, filename="randomized_exhaustive_min_cut.png"):
+def test_algorithms(graph_sizes, edge_probability, iterations=100, output_prefix="mincut_results"):
     """
-    Test the randomized exhaustive algorithm, visualize the min cut, and print results.
-    """
-    min_cut_weight, min_cut_partition, operations, iterations = randomized_exhaustive_min_cut(
-        graph, max_time=max_time, max_iterations=max_iterations)
-    print(f"Randomized Exhaustive Results for n={n}:")
-    print(f"Minimum cut weight: {min_cut_weight}")
-    print(f"Partition: {min_cut_partition}")
-    print(f"Operations: {operations}")
-    print(f"Iterations: {iterations}\n")
-    
-    visualize_min_cut(graph, min_cut_partition, filename)
+    Test Karger's and Stoer-Wagner algorithms for different graph sizes.
+    Saves results of solved graphs and plots execution time/operations.
 
-
-def test_randomized_greedy_min_cut(n, graph, max_time=60, max_iterations=1000, filename="randomized_greedy_min_cut.png"):
+    Args:
+        graph_sizes (list): List of graph sizes (number of nodes) to test.
+        edge_probability (float): Probability of edge creation for Erdos-Renyi graphs.
+        iterations (int): Number of iterations for Karger's algorithm.
+        output_prefix (str): Prefix for saving the results (graphs and plots).
     """
-    Test the randomized greedy algorithm, visualize the min cut, and print results.
-    """
-    min_cut_weight, min_cut_partition, operations, iterations = randomized_greedy_min_cut(
-        graph, max_time=max_time, max_iterations=max_iterations)
-    print(f"Randomized Greedy Results for n={n}:")
-    print(f"Minimum cut weight: {min_cut_weight}")
-    print(f"Partition: {min_cut_partition}")
-    print(f"Operations: {operations}")
-    print(f"Iterations: {iterations}\n")
-    
-    visualize_min_cut(graph, min_cut_partition, filename)
-
-def generate_execution_time_plot(algorithm, algorithm_name, node_range, edge_prob, max_time, max_iterations, filename_prefix):
-    """
-    Generate a plot for execution time vs number of nodes for a given algorithm.
-    """
+    # Results storage
+    karger_times = []
+    karger_operations = []
+    stoer_times = []
+    stoer_operations = []
     nodes = []
-    times = []
-    
-    for n in node_range:
-        graph = generate_graph_erdos_renyi(n, edge_prob)
-        start = perf_counter_ns()
-        algorithm(graph, max_time=max_time, max_iterations=max_iterations)
-        end = perf_counter_ns()
-        time_taken = (end - start) * 1e-9  # Convert to seconds
+
+    for n in graph_sizes:
+        print(f"Testing with graph size: {n}")
         nodes.append(n)
-        times.append(time_taken)
-        print(f"Execution Time for {algorithm_name} with n={n}: {time_taken:.2f} seconds")
 
-        # Stop if time exceeds the max_time
-        if time_taken > max_time:
-            print(f"{algorithm_name} exceeded time limit for n={n}. Stopping...\n")
-            break
+        # Generate a random graph
+        graph = generate_graph_erdos_renyi(n, edge_probability)
+        visualize_and_save_graph(graph, f"{output_prefix}_original_graph_{n}_nodes.png")
 
-    # Plot execution time
+        # Test Karger's Algorithm
+        print(f"Running Karger's Algorithm on graph with {n} nodes...")
+        start_time = perf_counter()
+        min_cut_karger, execution_time_karger, operations_karger = run_karger_multiple_times(graph, iterations)
+        end_time = perf_counter()
+        karger_times.append(execution_time_karger)
+        karger_operations.append(operations_karger)
+
+        print(f"Karger's Algorithm Results for n={n}:")
+        print(f"Minimum Cut: {min_cut_karger}")
+        print(f"Execution Time: {execution_time_karger:.4f} seconds")
+        print(f"Operations Count: {operations_karger}\n")
+
+        # Test Stoer-Wagner Algorithm
+        print(f"Running Stoer-Wagner Algorithm on graph with {n} nodes...")
+        start_time = perf_counter()
+        min_cut_stoer, operations_stoer = stoer_wagner_min_cut(graph)
+        end_time = perf_counter()
+        execution_time_stoer = end_time - start_time
+        stoer_times.append(execution_time_stoer)
+        stoer_operations.append(operations_stoer)
+
+        print(f"Stoer-Wagner Algorithm Results for n={n}:")
+        print(f"Minimum Cut: {min_cut_stoer}")
+        print(f"Execution Time: {execution_time_stoer:.4f} seconds")
+        print(f"Operations Count: {operations_stoer}\n")
+
+    # Generate and save execution time plot
     plt.figure(figsize=(10, 6))
-    plt.plot(nodes, times, marker='o', label=f"{algorithm_name}")
+    plt.plot(nodes, karger_times, marker='o', label="Karger's Algorithm")
+    plt.plot(nodes, stoer_times, marker='s', label="Stoer-Wagner Algorithm")
     plt.xlabel("Number of Nodes")
     plt.ylabel("Execution Time (seconds)")
-    plt.title(f"Execution Time vs Number of Nodes ({algorithm_name})")
-    plt.grid(True)
+    plt.title("Execution Time vs Number of Nodes")
     plt.legend()
+    plt.grid(True)
     plt.tight_layout()
-    plt.savefig(f"{filename_prefix}_execution_time.png")
+    plt.savefig(f"{output_prefix}_execution_time_plot.png")
     plt.close()
 
-
-def generate_operations_plot(algorithm, algorithm_name, node_range, edge_prob, max_time, max_iterations, filename_prefix):
-    """
-    Generate a plot for operations vs number of nodes for a given algorithm.
-    """
-    nodes = []
-    operations_list = []
-    
-    for n in node_range:
-        graph = generate_graph_erdos_renyi(n, edge_prob)
-        print(f"Testing {algorithm_name} with n={n}")
-        _, _, operations, _ = algorithm(graph, max_time=max_time, max_iterations=max_iterations)
-        nodes.append(n)
-        operations_list.append(operations)
-        print(f"Operations for {algorithm_name} with n={n}: {operations}\n")
-
-    # Plot operations
+    # Generate and save operations count plot
     plt.figure(figsize=(10, 6))
-    plt.plot(nodes, operations_list, marker='o', label=f"{algorithm_name}")
+    plt.plot(nodes, karger_operations, marker='o', label="Karger's Algorithm")
+    plt.plot(nodes, stoer_operations, marker='s', label="Stoer-Wagner Algorithm")
     plt.xlabel("Number of Nodes")
-    plt.ylabel("Number of Operations")
-    plt.title(f"Operations vs Number of Nodes ({algorithm_name})")
-    plt.grid(True)
+    plt.ylabel("Operations Count")
+    plt.title("Operations Count vs Number of Nodes")
     plt.legend()
+    plt.grid(True)
     plt.tight_layout()
-    plt.savefig(f"{filename_prefix}_operations.png")
+    plt.savefig(f"{output_prefix}_operations_plot.png")
     plt.close()
 
 
 def main():
-    # Parameters for testing
-    max_time = 60  # Maximum time for each algorithm
-    max_iterations = 1000  # Maximum iterations for the randomized algorithms
-    edge_prob = 0.5  # Probability of edge creation
+    """
+    Main function to test the minimum cut problem using Karger's and Stoer-Wagner algorithms.
+    """
+    graph_sizes = [10, 20, 50, 100, 200]  # Different graph sizes to test
+    edge_probability = 0.5  # Probability of edge creation in Erdos-Renyi graphs
+    iterations = 100  # Number of iterations for Karger's algorithm
 
-    # Generate and visualize results for specific graphs
-    for n in [10, 15, 20, 100]:
-        graph = generate_graph_erdos_renyi(n, edge_prob)
-        visualize_and_save_graph(graph, f"erdos_renyi_graph_{n}_nodes.png")
-        
-        # Test algorithms
-        test_randomized_exhaustive_min_cut(n, graph, max_time=max_time, max_iterations=max_iterations,
-                                           filename=f"randomized_exhaustive_min_cut_{n}_nodes.png")
-        test_randomized_greedy_min_cut(n, graph, max_time=max_time, max_iterations=max_iterations,
-                                       filename=f"randomized_greedy_min_cut_{n}_nodes.png")
-
-    # Generate execution time plots for randomized algorithms
-    node_range = range(10, 100, 1)  # Range of nodes for testing
-    generate_execution_time_plot(randomized_exhaustive_min_cut, "Randomized Exhaustive", node_range, edge_prob,
-                                 max_time, max_iterations, "randomized_exhaustive")
-    generate_execution_time_plot(randomized_greedy_min_cut, "Randomized Greedy", node_range, edge_prob,
-                                 max_time, max_iterations, "randomized_greedy")
-    
-    # Generate operations plots for randomized algorithms
-    generate_operations_plot(randomized_exhaustive_min_cut, "Randomized Exhaustive", node_range, edge_prob,
-                             max_time, max_iterations, "randomized_exhaustive")
-    generate_operations_plot(randomized_greedy_min_cut, "Randomized Greedy", node_range, edge_prob,
-                             max_time, max_iterations, "randomized_greedy")
+    test_algorithms(graph_sizes, edge_probability, iterations, output_prefix="mincut")
 
 
 if __name__ == "__main__":
