@@ -1,4 +1,4 @@
-from algorithms import *
+from old_algorithms import *
 from utils import *
 import matplotlib.pyplot as plt
 from time import perf_counter_ns
