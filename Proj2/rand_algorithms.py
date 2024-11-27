@@ -169,3 +169,62 @@ def randomized_greedy_min_cut(G, max_time=60, max_iterations=1000, max_attempts_
             global_best_partition = best_partition
 
     return global_min_cut, global_best_partition, operations, iteration + 1
+
+
+"""
+New algorithms
+"""
+def karger_min_cut(graph):
+    """
+    Calculates the minimum cut of a graph using Karger's Randomized Algorithm.
+
+    Args:
+        graph (dict): An adjacency list representation of the graph.
+                      Example: {1: [2, 3], 2: [1, 3], 3: [1, 2]}
+    
+    Returns:
+        int: The minimum cut (number of crossing edges).
+    """
+    # if the graph has only two nodes, return the number of edges between them
+    if len(graph) == 2:
+        nodes = list(graph.keys())
+        return len(graph[nodes[0]])  # num of edges between the two remaining nodes
+
+    # Step 1: pick a random edge (u, v) to contract
+    u = random.choice(list(graph.keys()))         # rand node u
+    v = random.choice(graph[u])                   # rand neighbor v
+
+    # Step 2: merge v into u and remove v from the graph
+    # append all edges of v to u
+    for neighbor in graph[v]:
+        if neighbor != u:  # important to avoid self-loops
+            graph[u].append(neighbor)
+        graph[neighbor] = [u if x == v else x for x in graph[neighbor]]  # replace v with u in neighbors
+    
+    del graph[v]  # Remove v from the graph
+    
+    # Step 3: remove self-loops
+    graph[u] = [x for x in graph[u] if x != u]
+    
+    # now recursively call the function on the updated graph
+    return karger_min_cut(graph)
+
+
+def run_karger_multiple_times(graph, iterations):
+    """
+    Runs Karger's algorithm multiple times to improve the probability of finding the true minimum cut.
+
+    Args:
+        graph (dict): An adjacency list representation of the graph.
+        iterations (int): Number of times to run the algorithm.
+    
+    Returns:
+        int: The minimum cut found across all iterations.
+    """
+    min_cut = float('inf')
+    for _ in range(iterations):
+        # Make a deep copy of the graph for each iteration
+        graph_copy = {node: neighbors[:] for node, neighbors in graph.items()}
+        cut = karger_min_cut(graph_copy)
+        min_cut = min(min_cut, cut)
+    return min_cut
