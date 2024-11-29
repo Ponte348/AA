@@ -1,10 +1,10 @@
 import networkx as nx
 import random
 from typing import Tuple, Set, List
-from utils import visualize_min_cut
+from utils import generate_graph_erdos_renyi, visualize_and_save_graph, visualize_min_cut
 
 def karger_min_cut(G: nx.Graph) -> Tuple[int, Tuple[Set, Set]]:
-    """
+    """ From wikipedia:
     procedure contract(G=(V,E)):
     while |V| > 2:
         choose e ∈ E uniformly at random
@@ -34,7 +34,7 @@ def karger_min_cut(G: nx.Graph) -> Tuple[int, Tuple[Set, Set]]:
         
         # contract edges until only 2 vertices remain
         while G_working.number_of_nodes() > 2:
-            if not G_working.edges():  # Handle disconnected graphs
+            if not G_working.edges():  # disconnected graph
                 break
                 
             # select a random edge
@@ -63,13 +63,13 @@ def karger_min_cut(G: nx.Graph) -> Tuple[int, Tuple[Set, Set]]:
     best_partition = None
     
     # run algorithm multiple times
-    for _ in range(iterations):
-        cut_size, partition = single_cut(G)
+    for _ in range(iterations): # O(n^2) iterations
+        cut_size, partition = single_cut(G) # O(n^2) per iteration
         if cut_size < best_cut:
             best_cut = cut_size
             best_partition = partition
     
-    # if no valid cut was found, return trivial cut
+    # if no valid cut was found, return the original graph
     if best_partition is None:
         nodes = list(G.nodes())
         return len(G.edges()), ({nodes[0]}, set(nodes[1:]))
@@ -78,7 +78,6 @@ def karger_min_cut(G: nx.Graph) -> Tuple[int, Tuple[Set, Set]]:
 
 # Function to create and save the graph
 def create_and_save_graph(n_nodes: int, edge_prob: float) -> nx.Graph:
-    from utils import generate_graph_erdos_renyi, visualize_and_save_graph, visualize_min_cut
     
     # Generate the graph
     G = generate_graph_erdos_renyi(n_nodes, edge_prob)
@@ -90,7 +89,7 @@ def create_and_save_graph(n_nodes: int, edge_prob: float) -> nx.Graph:
 
 # Example usage
 def main():
-    n_nodes = 15
+    n_nodes = 30
     edge_prob = 0.5
 
     G = create_and_save_graph(n_nodes, edge_prob)
