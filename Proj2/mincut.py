@@ -93,11 +93,12 @@ def karger_min_cut(G: nx.Graph) -> Tuple[int, Tuple[Set, Set]]:
     return best_cut, best_partition, operations
 
 # create the graph for our problem and save it for visualization
-def create_and_save_graph(n_nodes: int, edge_prob: float) -> nx.Graph:
+def create_and_save_graph(n_nodes: int, edge_prob: float, graph_visualizations=[13]) -> nx.Graph:
     
     G = generate_graph_erdos_renyi(n_nodes, edge_prob)
     
-    visualize_and_save_graph(G, f"graph_{n_nodes}_nodes.png")
+    for n in graph_visualizations: 
+        visualize_and_save_graph(G, f"graph_{n}_nodes.png")
     
     return G
 
@@ -110,9 +111,10 @@ def karger_analysis_plots(max_nodes=50):
     min_cut_visualizations = [8, 16, 24, 48, 60, 80, 100, 125, 150, 200, 250]
 
     # test Karger's algorithm
-    for n in range(2, max_nodes, 1):
+    for n in range(10, max_nodes, 1):
         m_prob = 0.5
-        G = generate_graph_erdos_renyi(n, m_prob)
+        #G = generate_graph_erdos_renyi(n, m_prob)
+        G = create_and_save_graph(n, m_prob)
         print(f"Testing Karger with {n} nodes", end='; ')
         
         # time measurement
@@ -143,7 +145,7 @@ def karger_analysis_plots(max_nodes=50):
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('karger_operations_regular.png')
+    plt.savefig(f"karger_operations_regular_{max_nodes}_nodes.png")
     plt.close()
     
     # Operations plot (log scale)
@@ -156,7 +158,7 @@ def karger_analysis_plots(max_nodes=50):
     plt.grid(True)
     plt.yscale('log')
     plt.tight_layout()
-    plt.savefig('karger_operations_log.png')
+    plt.savefig(f"karger_operations_log_{max_nodes}_nodes.png")
     plt.close()
 
     # Time plot (regular scale)
@@ -168,7 +170,7 @@ def karger_analysis_plots(max_nodes=50):
     plt.legend()
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('karger_time_regular.png')
+    plt.savefig(f"karger_time_regular_{max_nodes}_nodes.png")
     plt.close()
     
     # Time plot (log scale)
@@ -181,7 +183,7 @@ def karger_analysis_plots(max_nodes=50):
     plt.grid(True)
     plt.yscale('log')
     plt.tight_layout()
-    plt.savefig('karger_time_log.png')
+    plt.savefig(f"karger_time_log_{max_nodes}_nodes.png")
     plt.close()
 
     # Print some key points for analysis
@@ -189,6 +191,35 @@ def karger_analysis_plots(max_nodes=50):
     print(f"Final number of nodes tested: {nodes_list[-1]}")
     print(f"Final operation count: {operations_list[-1]}")
     print(f"Final execution time: {times_list[-1]:.2f} seconds")
+
+def test_accuracy(max_nodes=40):
+    """
+    Test the accuracy of the algorithm by comparing the min cut size between Karger's and Stoer-Wagner's algorithms.
+    """
+    
+    equal, not_equal = 0, 0
+    for n in range(10, max_nodes, 1):
+        m_prob = 0.5
+        G = generate_graph_erdos_renyi(n, m_prob)
+        print(f"Testing accuracy with {n} nodes")
+        
+        # get min cut using Stoer-Wagner's algorithm
+        sw_cut_size, sw_partition = nx.stoer_wagner(G)
+        
+        # get min cut using Karger's algorithm
+        karger_cut_size, karger_partition, _ = karger_min_cut(G)
+        
+        if sw_cut_size == karger_cut_size:
+            equal += 1
+        else:
+            not_equal += 1
+            
+        if karger_cut_size > karger_cut_size:
+            print("Something went wrong!")
+
+    accuracy = equal / (equal + not_equal) * 100
+    #print(f"\nAccuracy: {accuracy:.2f}%")
+    return accuracy
 
 # example
 def main():
@@ -213,7 +244,8 @@ def main():
     #visualize_min_cut(G, sw_partition, f"min_cut_stoer_wagner_{n_nodes}_nodes.png")
     #visualize_min_cut(G, karger_partition, f"min_cut_karger_{n_nodes}_nodes.png")
 
-    karger_analysis_plots(max_nodes=250)
+    #karger_analysis_plots(max_nodes=100)
+    test_accuracy(max_nodes=40)
 
 if __name__ == "__main__":
     main()
