@@ -115,7 +115,7 @@ def karger_analysis_plots(max_nodes=50):
         m_prob = 0.5
         #G = generate_graph_erdos_renyi(n, m_prob)
         G = create_and_save_graph(n, m_prob)
-        print(f"Testing Karger with {n} nodes", end='; ')
+        #print(f"Testing Karger with {n} nodes", end='; ')
         
         # time measurement
         start = perf_counter_ns()
@@ -124,13 +124,14 @@ def karger_analysis_plots(max_nodes=50):
         time_taken = (end - start) * 1e-9  # convert to seconds
         
         if n in min_cut_visualizations:
+            print(f"Visualizing min cut for {n} nodes")
             visualize_min_cut(G, karger_partition, f"min_cut_karger_{n}_nodes.png")
         
         nodes_list.append(n)
         operations_list.append(operations)
         times_list.append(time_taken)
         
-        print(f"Time taken: {time_taken:.2f} seconds, Operations: {operations}")
+        #print(f"Time taken: {time_taken:.2f} seconds, Operations: {operations}")
         
         # stop if execution takes more than 5 minutes
         if time_taken > 300:
@@ -198,9 +199,9 @@ def test_accuracy(max_nodes=40):
     """
     
     equal, not_equal = 0, 0
+    G = generate_graph_erdos_renyi(n, m_prob)
     for n in range(10, max_nodes, 1):
         m_prob = 0.5
-        G = generate_graph_erdos_renyi(n, m_prob)
         print(f"Testing accuracy with {n} nodes")
         
         # get min cut using Stoer-Wagner's algorithm
@@ -220,6 +221,53 @@ def test_accuracy(max_nodes=40):
     accuracy = equal / (equal + not_equal) * 100
     #print(f"\nAccuracy: {accuracy:.2f}%")
     return accuracy
+
+def test_accuracy_singular(n_nodes=30, n_tests=30):
+    """
+    Test the accuracy of the algorithm by comparing the min cut size between Karger's and Stoer-Wagner's algorithms.
+    """
+    
+    equal, not_equal = 0, 0
+    for _ in range(n_tests):
+        G = generate_graph_erdos_renyi(n_nodes, 0.5)
+        
+        # get min cut using Stoer-Wagner's algorithm
+        sw_cut_size, sw_partition = nx.stoer_wagner(G)
+        # get min cut using Karger's algorithm
+        karger_cut_size, karger_partition, _ = karger_min_cut(G)
+        
+        if sw_cut_size == karger_cut_size:
+            equal += 1
+        else:
+            not_equal += 1
+            
+        if karger_cut_size > karger_cut_size:
+            print("Something went wrong!")
+
+    return equal / (equal + not_equal) * 100
+
+def print_accuracy_plot(num_nodes, node_list, accuracy_list):
+    plt.figure(figsize=(10, 6))
+    plt.plot(node_list, accuracy_list, 'g-', label='Karger')
+    plt.xlabel('Number of Nodes')
+    plt.ylabel('Accuracy (%)')
+    plt.title('Accuracy vs Number of Nodes (Karger\'s Algorithm)')
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f"karger_accuracy_{num_nodes}_nodes.png")
+    plt.close()
+    
+def accuracy_plots(max_nodes=40, n_tests=30, visualizations=[15, 25, 50, 75, 100]):
+    # for graphs of n nodes until max_nodes, tests the accuracy of the algorithm n_tests times
+    nodes_list = []
+    accuracy_list = []
+    
+    for n in range(10, max_nodes, 1):
+        nodes_list.append(n)
+        accuracy_list.append(test_accuracy_singular(n, n_tests))
+        if n in visualizations:
+            print_accuracy_plot(n, nodes_list, accuracy_list)
 
 # example
 def main():
@@ -244,8 +292,8 @@ def main():
     #visualize_min_cut(G, sw_partition, f"min_cut_stoer_wagner_{n_nodes}_nodes.png")
     #visualize_min_cut(G, karger_partition, f"min_cut_karger_{n_nodes}_nodes.png")
 
-    #karger_analysis_plots(max_nodes=100)
-    test_accuracy(max_nodes=40)
+    #karger_analysis_plots(max_nodes=300)
+    accuracy_plots(max_nodes=51, n_tests=200)
 
 if __name__ == "__main__":
     main()
