@@ -110,8 +110,12 @@ def karger_analysis_plots(max_nodes=50):
     # the graphs of these sizes will be saved for visualization
     min_cut_visualizations = [8, 16, 24, 48, 60, 80, 100, 125, 150, 200, 250]
 
+    # open a file to write the results
+    with open("karger_analysis.txt", "w") as f:
+        f.write("Number of Nodes,Operations,Execution Time\n")
+
     # test Karger's algorithm
-    for n in range(10, max_nodes, 1):
+    for n in range(10, max_nodes, 2):
         m_prob = 0.5
         #G = generate_graph_erdos_renyi(n, m_prob)
         G = create_and_save_graph(n, m_prob)
@@ -131,6 +135,10 @@ def karger_analysis_plots(max_nodes=50):
         operations_list.append(operations)
         times_list.append(time_taken)
         
+        # write results to file
+        with open("karger_analysis.txt", "a") as f:
+            f.write(f"{n},{operations},{time_taken}\n")
+        
         #print(f"Time taken: {time_taken:.2f} seconds, Operations: {operations}")
         
         # stop if execution takes more than 5 minutes
@@ -138,60 +146,60 @@ def karger_analysis_plots(max_nodes=50):
             break
 
     # Operations plot (regular scale)
-    plt.figure(figsize=(10, 6))
-    plt.plot(nodes_list, operations_list, 'g-', label='Karger')
-    plt.xlabel('Number of Nodes')
-    plt.ylabel('Number of Operations')
-    plt.title('Operations vs Number of Nodes (Karger\'s Algorithm)')
-    plt.legend()
-    plt.grid(True)
-    plt.tight_layout()
-    plt.savefig(f"karger_operations_regular_{max_nodes}_nodes.png")
-    plt.close()
-    
-    # Operations plot (log scale)
-    plt.figure(figsize=(10, 6))
-    plt.plot(nodes_list, operations_list, 'g-', label='Karger')
-    plt.xlabel('Number of Nodes')
-    plt.ylabel('Number of Operations (log scale)')
-    plt.title('Operations vs Number of Nodes (Karger\'s Algorithm) - Log Scale')
-    plt.legend()
-    plt.grid(True)
-    plt.yscale('log')
-    plt.tight_layout()
-    plt.savefig(f"karger_operations_log_{max_nodes}_nodes.png")
-    plt.close()
-
-    # Time plot (regular scale)
-    plt.figure(figsize=(10, 6))
-    plt.plot(nodes_list, times_list, 'g-', label='Karger')
-    plt.xlabel('Number of Nodes')
-    plt.ylabel('Execution Time (seconds)')
-    plt.title('Execution Time vs Number of Nodes (Karger\'s Algorithm)')
-    plt.legend()
-    plt.grid(True)
-    plt.tight_layout()
-    plt.savefig(f"karger_time_regular_{max_nodes}_nodes.png")
-    plt.close()
-    
-    # Time plot (log scale)
-    plt.figure(figsize=(10, 6))
-    plt.plot(nodes_list, times_list, 'g-', label='Karger')
-    plt.xlabel('Number of Nodes')
-    plt.ylabel('Execution Time (seconds, log scale)')
-    plt.title('Execution Time vs Number of Nodes (Karger\'s Algorithm) - Log Scale')
-    plt.legend()
-    plt.grid(True)
-    plt.yscale('log')
-    plt.tight_layout()
-    plt.savefig(f"karger_time_log_{max_nodes}_nodes.png")
-    plt.close()
-
-    # Print some key points for analysis
-    print("\nKey Points:")
-    print(f"Final number of nodes tested: {nodes_list[-1]}")
-    print(f"Final operation count: {operations_list[-1]}")
-    print(f"Final execution time: {times_list[-1]:.2f} seconds")
+    #plt.figure(figsize=(10, 6))
+    #plt.plot(nodes_list, operations_list, 'g-', label='Karger')
+    #plt.xlabel('Number of Nodes')
+    #plt.ylabel('Number of Operations')
+    #plt.title('Operations vs Number of Nodes (Karger\'s Algorithm)')
+    #plt.legend()
+    #plt.grid(True)
+    #plt.tight_layout()
+    #plt.savefig(f"karger_operations_regular_{max_nodes}_nodes.png")
+    #plt.close()
+    #
+    ## Operations plot (log scale)
+    #plt.figure(figsize=(10, 6))
+    #plt.plot(nodes_list, operations_list, 'g-', label='Karger')
+    #plt.xlabel('Number of Nodes')
+    #plt.ylabel('Number of Operations (log scale)')
+    #plt.title('Operations vs Number of Nodes (Karger\'s Algorithm) - Log Scale')
+    #plt.legend()
+    #plt.grid(True)
+    #plt.yscale('log')
+    #plt.tight_layout()
+    #plt.savefig(f"karger_operations_log_{max_nodes}_nodes.png")
+    #plt.close()
+#
+    ## Time plot (regular scale)
+    #plt.figure(figsize=(10, 6))
+    #plt.plot(nodes_list, times_list, 'g-', label='Karger')
+    #plt.xlabel('Number of Nodes')
+    #plt.ylabel('Execution Time (seconds)')
+    #plt.title('Execution Time vs Number of Nodes (Karger\'s Algorithm)')
+    #plt.legend()
+    #plt.grid(True)
+    #plt.tight_layout()
+    #plt.savefig(f"karger_time_regular_{max_nodes}_nodes.png")
+    #plt.close()
+    #
+    ## Time plot (log scale)
+    #plt.figure(figsize=(10, 6))
+    #plt.plot(nodes_list, times_list, 'g-', label='Karger')
+    #plt.xlabel('Number of Nodes')
+    #plt.ylabel('Execution Time (seconds, log scale)')
+    #plt.title('Execution Time vs Number of Nodes (Karger\'s Algorithm) - Log Scale')
+    #plt.legend()
+    #plt.grid(True)
+    #plt.yscale('log')
+    #plt.tight_layout()
+    #plt.savefig(f"karger_time_log_{max_nodes}_nodes.png")
+    #plt.close()
+#
+    ## Print some key points for analysis
+    #print("\nKey Points:")
+    #print(f"Final number of nodes tested: {nodes_list[-1]}")
+    #print(f"Final operation count: {operations_list[-1]}")
+    #print(f"Final execution time: {times_list[-1]:.2f} seconds")
 
 def test_accuracy(max_nodes=40):
     """
@@ -269,6 +277,36 @@ def accuracy_plots(max_nodes=40, n_tests=30, visualizations=[15, 25, 50, 75, 100
         if n in visualizations:
             print_accuracy_plot(n, nodes_list, accuracy_list)
 
+def edge_probability_plot(max_nodes=37):
+    # for 3 different graph sizes (12, 24, 36), calculate minimum cut size for different edge probabilities
+    n_nodes = [12, 24, 36, 48, 60, 72, 84, 96]
+    edge_probs = [0.5, 0.6, 0.7, 0.8, 0.9]
+
+    for n in n_nodes:
+        print(f"Testing edge probabilities for {n} nodes")
+        min_cut_sizes_karger = []
+        min_cut_sizes_stoer = []
+        for p in edge_probs:
+            G = generate_graph_erdos_renyi(n, p)
+            min_cut_size_karger, _, _ = karger_min_cut(G)
+            min_cut_size_stoer, _ = nx.stoer_wagner(G)
+            min_cut_sizes_karger.append(min_cut_size_karger)
+            min_cut_sizes_stoer.append(min_cut_size_stoer)
+        
+        # plot both min cut sizes
+        plt.figure(figsize=(10, 6))
+        plt.plot(edge_probs, min_cut_sizes_karger, 'g-', label='Karger')
+        plt.plot(edge_probs, min_cut_sizes_stoer, 'b-', label='Stoer-Wagner')
+        plt.xlabel('Edge Probability')
+        plt.ylabel('Minimum Cut Size')
+        plt.title(f'Minimum Cut Size vs Edge Probability ({n} Nodes)')
+        plt.legend()
+        plt.grid(True)
+        plt.tight_layout()
+        plt.savefig(f"min_cut_prob_{n}_nodes.png")
+        plt.close()
+
+
 # example
 def main():
     #n_nodes = 30
@@ -293,7 +331,8 @@ def main():
     #visualize_min_cut(G, karger_partition, f"min_cut_karger_{n_nodes}_nodes.png")
 
     #karger_analysis_plots(max_nodes=300)
-    accuracy_plots(max_nodes=51, n_tests=200)
+    #accuracy_plots(max_nodes=51, n_tests=200)
+    edge_probability_plot(max_nodes=37)
 
 if __name__ == "__main__":
     main()
