@@ -3,12 +3,18 @@ import re
 import nltk
 from nltk.corpus import stopwords
 
-def getFiles():
+def getOriginalFiles():
     files = []
     for file in sorted(os.listdir("originalFiles/")):
         files.append("originalFiles/" + file)
     return files
-    
+
+def getProcessedFiles():
+    files = []
+    for file in sorted(os.listdir("processedFiles/")):
+        files.append("processedFiles/" + file)
+    return files
+
 def removeHeaderTail(file):
     """
     Files:
@@ -116,7 +122,7 @@ def removePunctuationStopLower(file):
     print(f"Processed file saved as {new_file}")
     
 def main():
-    files = getFiles()
+    files = getOriginalFiles()
     for file in files:
         removeHeaderTail(file)
         processed_file = "processedFiles/" + file.split("/")[1]
