@@ -33,7 +33,7 @@ def lossyCount(file, epsilon=0.001):
     
     sorted_words = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
     
-    stats_file = os.path.join("lossy_count_stats", os.path.basename(file))
+    stats_file = os.path.join("streaming_stats", os.path.basename(file))
     with open(stats_file, 'w') as f:
         f.write(f"Lossy counting results (epsilon={epsilon}):\n")
         f.write(f"Total words processed: {N}\n")
