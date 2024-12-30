@@ -107,6 +107,8 @@ def removePunctuationStopLower(file):
     stop_words = set(stopwords.words('english'))
     for palavra in set(stopwords.words('portuguese')):
         stop_words.add(palavra)
+    for palavra in set(stopwords.words('spanish')):
+        stop_words.add(palavra)
     
     new_lines = []
     for line in lines:
