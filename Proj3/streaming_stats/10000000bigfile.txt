@@ -1,0 +1,9 @@
+Lossy counting results (epsilon=0.001):
+Total words processed: 25304822
+Bucket width: 1000
+
+Word occurrences:
+R: 3
+u: 2
+v: 2
+r: 2
