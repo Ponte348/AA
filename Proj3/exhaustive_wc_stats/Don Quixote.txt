@@ -1,6 +1,6 @@
-Number of lines (excluding empty): 35064
-Number of words: 187737
-Number of characters (excluding newlines): 1254273
+Number of lines (excluding empty): 35062
+Number of words: 187177
+Number of characters (excluding newlines): 1252271
 
 Word occurrences:
 said: 2624
@@ -148,7 +148,6 @@ rocinante: 179
 full: 177
 men: 177
 show: 176
-la: 176
 others: 176
 history: 175
 governor: 174
@@ -263,7 +262,6 @@ wilt: 120
 feet: 120
 husband: 120
 cervantes: 119
-del: 119
 fell: 119
 devil: 118
 sword: 117
@@ -316,7 +314,6 @@ perhaps: 105
 arm: 105
 dorothea: 105
 whatever: 104
-son: 104
 times: 103
 sleep: 103
 gone: 102
@@ -587,7 +584,6 @@ altisidora: 59
 vanquished: 59
 prove: 58
 condition: 58
-el: 58
 especially: 58
 niece: 58
 talking: 58
@@ -647,7 +643,6 @@ satisfaction: 53
 sake: 53
 consider: 53
 mistress: 53
-sea: 53
 served: 52
 glory: 52
 birth: 52
@@ -1577,7 +1572,6 @@ breaking: 21
 authority: 21
 modest: 21
 heavy: 21
-sin: 21
 trick: 21
 miracle: 21
 cruelty: 21
@@ -4626,7 +4620,6 @@ marvel: 5
 scorned: 5
 gothic: 5
 gobetween: 5
-hay: 5
 plainer: 5
 ornament: 5
 threequarters: 5
@@ -5228,7 +5221,6 @@ stepfather: 4
 neglected: 4
 humorous: 4
 chapters: 4
-con: 4
 assailant: 4
 unfinished: 4
 scolding: 4
@@ -5455,7 +5447,6 @@ sarna: 4
 bliss: 4
 matrimony: 4
 mate: 4
-lo: 4
 afield: 4
 flings: 4
 despairing: 4
@@ -5936,7 +5927,6 @@ towels: 4
 soap: 4
 cleanliness: 4
 adders: 4
-tus: 4
 tripes: 4
 candles: 4
 islanders: 4
@@ -6227,7 +6217,6 @@ comforts: 3
 homage: 3
 bon: 3
 matched: 3
-seas: 3
 fellowship: 3
 _r_: 3
 excellencys: 3
@@ -9304,7 +9293,6 @@ inmost: 2
 wight: 2
 fishingrod: 2
 shes: 2
-ha: 2
 disown: 2
 beans: 2
 hangerson: 2
@@ -10279,7 +10267,6 @@ dawdling: 1
 sigismundawhich: 1
 theagenes: 1
 charicleaor: 1
-en: 1
 breveshortly: 1
 sixtyeight: 1
 nemesis: 1
@@ -10315,7 +10302,6 @@ plaintively: 1
 introduces: 1
 tenfold: 1
 engano: 1
-los: 1
 ojos: 1
 mistook: 1
 masterpiece: 1
@@ -10349,7 +10335,6 @@ sentimentalists: 1
 englishspeaking: 1
 scotts: 1
 liabilities: 1
-las: 1
 unexceptionable: 1
 provincial: 1
 selfglorification: 1
@@ -10955,7 +10940,6 @@ bethought: 1
 xarifa: 1
 señorsinner: 1
 amcannot: 1
-pero: 1
 nicholasfor: 1
 barberit: 1
 misventures: 1
@@ -11527,7 +11511,6 @@ espartafilardo: 1
 bosque: 1
 asparagus: 1
 _rastrea: 1
-mi: 1
 suerte_: 1
 xanthus: 1
 woody: 1
@@ -15818,7 +15801,6 @@ jollity: 1
 español: 1
 tudesqui: 1
 tuto: 1
-uno: 1
 jur: 1
 drowsiness: 1
 enactments: 1
@@ -16499,7 +16481,6 @@ mauleon: 1
 _deum: 1
 deo_: 1
 _dé: 1
-donde: 1
 diere_: 1
 indoors: 1
 erat_: 1

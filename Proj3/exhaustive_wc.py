@@ -24,7 +24,7 @@ def countWordOccurrences(file, stats_dir="exhaustive_wc_stats"):
     sorted_words = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
     
     # save stats
-    stats_file = stats_dir + file.split("/")[-1]
+    stats_file = stats_dir + "/" + file.split("/")[-1]
     with open(stats_file, 'w') as f:
         f.write(f"Number of lines (excluding empty): {num_lines}\n")
         f.write(f"Number of words: {num_words}\n")

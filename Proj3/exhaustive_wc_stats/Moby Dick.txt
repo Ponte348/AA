@@ -1,6 +1,6 @@
-Number of lines (excluding empty): 18854
-Number of words: 109350
-Number of characters (excluding newlines): 750273
+Number of lines (excluding empty): 18851
+Number of words: 108791
+Number of characters (excluding newlines): 748010
 
 Word occurrences:
 whale: 950
@@ -14,7 +14,6 @@ ye: 420
 ahab: 416
 whales: 396
 ship: 384
-sea: 379
 though: 364
 yet: 339
 time: 323
@@ -153,7 +152,6 @@ leg: 88
 whether: 88
 indeed: 88
 sometimes: 87
-seas: 87
 perhaps: 87
 going: 86
 whose: 86
@@ -520,7 +518,6 @@ cant: 32
 mad: 32
 rigging: 32
 already: 32
-ha: 32
 planks: 32
 hammock: 32
 drawing: 32
@@ -886,7 +883,6 @@ slightest: 20
 died: 20
 father: 20
 prow: 20
-son: 20
 laid: 20
 billows: 20
 moreover: 20
@@ -1050,7 +1046,6 @@ fatal: 17
 figure: 17
 dragged: 17
 months: 17
-lo: 17
 whence: 17
 gaze: 17
 rocks: 17
@@ -2331,7 +2326,6 @@ snowy: 8
 authority: 8
 ordered: 8
 folded: 8
-sin: 8
 wherein: 8
 joppa: 8
 lurks: 8
@@ -2395,7 +2389,6 @@ eventually: 8
 solemnly: 8
 withdrawing: 8
 goodbye: 8
-la: 8
 change: 8
 walking: 8
 whaleboats: 8
@@ -5731,7 +5724,6 @@ surgeons: 3
 grope: 3
 declares: 3
 charley: 3
-hay: 3
 _sperm: 3
 individuality: 3
 opine: 3
@@ -6779,7 +6771,6 @@ alcoves: 2
 whites: 2
 manage: 2
 stones: 2
-del: 2
 beech: 2
 cheery: 2
 song_: 2
@@ -16960,7 +16951,6 @@ defence: 1
 witty: 1
 illustrate: 1
 crim: 1
-con: 1
 bridle: 1
 instituted: 1
 stress: 1
@@ -17349,7 +17339,6 @@ plums: 1
 rubies: 1
 citron: 1
 cutlet: 1
-le: 1
 gros: 1
 vintage: 1
 vineyards: 1
@@ -19091,7 +19080,6 @@ waymake: 1
 caged: 1
 howlings: 1
 lawaye: 1
-sois: 1
 tindering: 1
 togetherand: 1
 ifand: 1

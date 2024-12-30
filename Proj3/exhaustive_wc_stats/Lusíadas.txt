@@ -1,6 +1,6 @@
 Number of lines (excluding empty): 9931
-Number of words: 33452
-Number of characters (excluding newlines): 219017
+Number of words: 32804
+Number of characters (excluding newlines): 215110
 
 Word occurrences:
 gente: 230
@@ -10,9 +10,7 @@ rei: 203
 mar: 188
 onde: 177
 grande: 138
-tanto: 132
 ali: 103
-porque: 102
 assim: 102
 mundo: 101
 bem: 98
@@ -27,13 +25,10 @@ forte: 79
 nunca: 77
 peito: 76
 tempo: 76
-contra: 75
 ó: 74
 outro: 72
 nome: 72
 parte: 71
-todo: 71
-todos: 69
 fama: 66
 logo: 66
 lá: 65
@@ -116,12 +111,10 @@ pátria: 34
 doce: 34
 vêm: 33
 outra: 33
-sobre: 33
 alta: 33
 palavras: 33
 deste: 33
 outras: 33
-antes: 32
 deuses: 32
 disse: 32
 dá: 32
@@ -138,7 +131,6 @@ tanta: 31
 rio: 30
 cor: 30
 inda: 30
-donde: 30
 sangue: 30
 segundo: 30
 co: 30
@@ -166,7 +158,6 @@ partes: 26
 caminho: 26
 verdade: 26
 rica: 26
-ti: 26
 ferro: 26
 lusitano: 25
 vereis: 25
@@ -360,7 +351,6 @@ soberbo: 15
 batéis: 15
 larga: 15
 maneira: 15
-nada: 15
 noite: 15
 geração: 15
 falso: 15
@@ -491,7 +481,6 @@ presa: 12
 entra: 12
 fraco: 12
 dous: 12
-estando: 12
 fala: 12
 famoso: 12
 pés: 12
@@ -502,7 +491,6 @@ aves: 12
 primeira: 12
 altas: 12
 ajuda: 11
-sois: 11
 excelente: 11
 22: 11
 feros: 11
@@ -694,7 +682,6 @@ próprio: 10
 possantes: 10
 empresa: 10
 roma: 10
-estado: 10
 cobiça: 10
 cruel: 10
 cercado: 10
@@ -1048,7 +1035,6 @@ ingente: 7
 outeiros: 7
 árvores: 7
 estoutro: 7
-mi: 7
 negros: 7
 nuvem: 7
 enseada: 7
@@ -1800,7 +1786,6 @@ murmurando: 4
 ceres: 4
 fértil: 4
 tardança: 4
-desde: 4
 santarém: 4
 trazido: 4
 correr: 4
@@ -1825,7 +1810,6 @@ lindo: 4
 chorando: 4
 espadas: 4
 mafamede: 4
-ante: 4
 matar: 4
 desterro: 4
 aquiles: 4
@@ -2328,7 +2312,6 @@ rompe: 3
 desfaz: 3
 pernas: 3
 dono: 3
-sentido: 3
 correm: 3
 branco: 3
 número: 3
@@ -2533,7 +2516,6 @@ desvio: 3
 fundas: 3
 creia: 3
 conosco: 3
-serás: 3
 extremos: 3
 desses: 3
 remos: 3
@@ -2914,7 +2896,6 @@ debuxada: 2
 única: 2
 virgem: 2
 línguas: 2
-sentidos: 2
 governava: 2
 produzidos: 2
 enganados: 2
@@ -3690,7 +3671,6 @@ ledas: 2
 banquetes: 2
 pescados: 2
 parta: 2
-estará: 2
 navegação: 2
 vaise: 2
 interno: 2
@@ -4023,7 +4003,6 @@ soldado: 2
 desgosto: 2
 levas: 2
 sucesso: 2
-la: 2
 volvendo: 2
 experimentálo: 2
 deleitosas: 2
@@ -7021,7 +7000,6 @@ subirá: 1
 sétimo: 1
 correntes: 1
 indicas: 1
-sus: 1
 curral: 1
 estorva: 1
 imundo: 1
@@ -7949,7 +7927,6 @@ acertam: 1
 desordenados: 1
 desconcertados: 1
 tamboril: 1
-estados: 1
 moças: 1
 bíbli: 1
 cinireia: 1
@@ -8596,7 +8573,6 @@ descobir: 1
 provado: 1
 castigará: 1
 dobrado: 1
-estás: 1
 dhonras: 1
 virás: 1
 descobres: 1

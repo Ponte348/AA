@@ -1,6 +1,6 @@
 Number of lines (excluding empty): 1752
-Number of words: 10153
-Number of characters (excluding newlines): 66630
+Number of words: 10151
+Number of characters (excluding newlines): 66622
 
 Word occurrences:
 gregor: 199
@@ -845,7 +845,6 @@ bosss: 2
 assistant: 2
 service: 2
 accuse: 2
-son: 2
 hungrier: 2
 cautious: 2
 painful: 2

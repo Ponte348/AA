@@ -1,6 +1,6 @@
 Number of lines (excluding empty): 17823
-Number of words: 91420
-Number of characters (excluding newlines): 625951
+Number of words: 91018
+Number of characters (excluding newlines): 624338
 
 Word occurrences:
 oer: 445
@@ -36,7 +36,6 @@ proud: 129
 arms: 127
 day: 125
 might: 124
-son: 123
 various: 122
 eyes: 122
 wide: 122
@@ -80,7 +79,6 @@ fate: 98
 old: 96
 human: 94
 race: 94
-sea: 93
 view: 93
 ever: 93
 prince: 93
@@ -117,7 +115,6 @@ hand: 82
 head: 81
 time: 80
 till: 80
-seas: 80
 moorish: 80
 heavn: 80
 hope: 79
@@ -361,7 +358,6 @@ known: 41
 port: 41
 nymphs: 41
 lovely: 41
-lo: 41
 therefore: 40
 find: 40
 manners: 40
@@ -1333,7 +1329,6 @@ sink: 14
 greece: 14
 felt: 14
 base: 14
-le: 14
 civilization: 14
 impossible: 14
 number: 14
@@ -1532,7 +1527,6 @@ sinks: 13
 apollo: 13
 holds: 13
 innumerable: 13
-la: 13
 places: 12
 information: 12
 peculiar: 12
@@ -2373,7 +2367,6 @@ observations: 8
 adventurers: 8
 african: 8
 sacrificed: 8
-del: 8
 ambassador: 8
 auspicious: 8
 desired: 8
@@ -3790,7 +3783,6 @@ melodious: 5
 mistake: 5
 palaces: 5
 women: 5
-en: 5
 japan: 5
 presides: 5
 sects: 5
@@ -3955,7 +3947,6 @@ barbarism: 4
 ninth: 4
 selfish: 4
 sentiment: 4
-al: 4
 sol: 4
 translations: 4
 richard: 4
@@ -4547,7 +4538,6 @@ nec: 4
 cited: 4
 expressions: 4
 du: 4
-les: 4
 fishing: 4
 emotion: 4
 flanders: 4
@@ -5751,7 +5741,6 @@ lasted: 3
 whereas: 3
 argent: 3
 coronation: 3
-el: 3
 mondego: 3
 ecl: 3
 vox: 3
@@ -7887,7 +7876,6 @@ auras: 2
 undis_: 2
 _le: 2
 _business_: 2
-muy: 2
 speeches: 2
 exceeding: 2
 conveys: 2
@@ -8031,7 +8019,6 @@ templo: 2
 gratia: 2
 omnibus: 2
 affirmed: 2
-un: 2
 dicebant: 2
 illis: 2
 navigatione: 2
@@ -8156,7 +8143,6 @@ communion: 2
 prostrated: 2
 assuring: 2
 imaus: 2
-sin: 2
 veneration: 2
 vishnu: 2
 belly: 2
@@ -8223,7 +8209,6 @@ ascribe: 2
 rivalship: 2
 feathers: 2
 derives: 2
-con: 2
 shiftings: 2
 enchanter: 2
 solyman: 2
@@ -8610,7 +8595,6 @@ fim: 1
 accaberey: 1
 vida: 1
 verràm: 1
-todos: 1
 fuy: 1
 afeiçoada: 1
 patria_: 1
@@ -9139,7 +9123,6 @@ objector: 1
 1442: 1
 adeget: 1
 arguim: 1
-las: 1
 garças: 1
 lagos: 1
 nar: 1
@@ -13271,7 +13254,6 @@ sequiturque: 1
 nefas: 1
 ægyptia: 1
 conjux: 1
-una: 1
 ruere: 1
 totum: 1
 spumare: 1
@@ -14339,7 +14321,6 @@ oran: 1
 tlemicen: 1
 fez: 1
 346: 1
-contra: 1
 hesperionceras: 1
 narrantur: 1
 quondam: 1
@@ -15627,7 +15608,6 @@ desta: 1
 ordena: 1
 tudo: 1
 resista: 1
-porque: 1
 sahe: 1
 facilmente: 1
 pòde: 1
@@ -16109,7 +16089,6 @@ corpus: 1
 tegis: 1
 unius: 1
 mox: 1
-es: 1
 tectura: 1
 duorum: 1
 signa: 1

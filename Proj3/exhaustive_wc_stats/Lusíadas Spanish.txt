@@ -1,76 +1,38 @@
-Number of lines (excluding empty): 9024
-Number of words: 45679
-Number of characters (excluding newlines): 268088
+Number of lines (excluding empty): 9023
+Number of words: 30903
+Number of characters (excluding newlines): 211159
 
 Word occurrences:
-el: 1953
-la: 1793
-en: 1366
-con: 1009
-los: 803
-las: 608
-del: 591
-al: 544
-su: 482
-más: 295
-le: 290
-un: 286
-lo: 271
 rey: 256
 gente: 247
-ya: 243
 mar: 238
 tierra: 231
 tan: 220
-es: 197
 si: 190
-quien: 179
-sus: 158
 fué: 142
-porque: 133
-sin: 131
-cual: 123
-donde: 118
 grande: 116
 aquí: 115
-cuando: 110
 gran: 109
-ni: 108
-él: 105
 tal: 101
 pecho: 100
-qué: 99
 reino: 97
-todos: 97
 mundo: 95
-tanto: 92
-ha: 92
 allí: 92
-muy: 91
-todo: 90
 amor: 89
 pues: 88
-una: 85
 tiempo: 85
 cielo: 85
 bien: 84
 nombre: 83
 parte: 83
-tiene: 83
-son: 82
 dios: 79
-ella: 78
 guerra: 78
 fama: 77
 fuerte: 77
 así: 76
-les: 75
 mil: 74
-esto: 72
 moro: 71
 agua: 71
-contra: 69
-otro: 68
 gama: 68
 fuerza: 67
 oh: 67
@@ -87,20 +49,15 @@ fin: 59
 van: 59
 capitán: 59
 cuanto: 58
-mi: 57
 hijo: 57
-yo: 56
 gentes: 56
 fuego: 53
 aguas: 51
 claro: 51
 cómo: 51
-otros: 50
 aunque: 49
 armas: 48
 tierras: 48
-sobre: 47
-ellos: 47
 mira: 47
 poder: 46
 sol: 46
@@ -108,19 +65,15 @@ flota: 46
 isla: 46
 pueblo: 45
 ahora: 44
-sí: 43
 gloria: 43
 viento: 43
 campo: 43
 moros: 43
 hace: 43
 toda: 42
-poco: 42
-otra: 42
 oro: 42
 siendo: 42
 costa: 41
-tú: 41
 hechos: 40
 hecho: 40
 dulce: 40
@@ -131,10 +84,8 @@ valor: 39
 arte: 39
 ley: 39
 grandes: 39
-estaba: 38
 suerte: 38
 aquesta: 38
-hasta: 38
 triste: 38
 dió: 37
 rostro: 37
@@ -146,22 +97,14 @@ puerto: 36
 menos: 35
 día: 35
 sólo: 35
-hay: 35
-nuestra: 35
-también: 35
 esfuerzo: 35
 río: 34
-están: 34
 ilustre: 33
 ojos: 33
-sea: 33
 duro: 33
-fuera: 33
 quién: 33
 dar: 33
 alto: 32
-antes: 32
-otras: 32
 primero: 31
 marte: 31
 aun: 31
@@ -173,7 +116,6 @@ manda: 31
 ardiente: 30
 humano: 30
 luso: 30
-vuestro: 29
 color: 29
 ilustración: 29
 dioses: 29
@@ -182,7 +124,6 @@ dando: 29
 puesto: 29
 nueva: 29
 engaño: 29
-mucho: 29
 nuevo: 28
 temor: 28
 patria: 28
@@ -191,11 +132,9 @@ naos: 28
 allá: 28
 viene: 28
 mano: 28
-muchos: 28
 vista: 28
 cruel: 28
 llama: 28
-uno: 28
 dura: 28
 vientos: 27
 partes: 27
@@ -220,19 +159,16 @@ oriente: 25
 aire: 25
 cuerpo: 25
 grave: 25
-tienen: 25
 cada: 25
 luz: 25
 corazón: 25
 compañía: 25
-unos: 25
 veces: 25
 mayor: 25
 espada: 25
 brazo: 25
 cuyo: 24
 paz: 24
-estos: 24
 viejo: 24
 baco: 24
 atrás: 24
@@ -244,8 +180,6 @@ hierro: 24
 trabajo: 24
 neptuno: 23
 palabras: 23
-eran: 23
-ellas: 23
 tanta: 23
 ninfas: 23
 monte: 23
@@ -258,15 +192,10 @@ frío: 22
 airado: 22
 venus: 22
 hijos: 22
-había: 22
 queda: 22
-ti: 22
 éste: 22
 voz: 22
-fueron: 21
 esperanza: 21
-han: 21
-vuestros: 21
 portugueses: 21
 delante: 21
 quiere: 21
@@ -282,12 +211,10 @@ lusitano: 20
 ayuda: 20
 señor: 20
 alfonso: 20
-vuestra: 20
 mares: 20
 asiento: 20
 razón: 20
 blando: 20
-nada: 20
 virtud: 20
 madre: 20
 dentro: 20
@@ -301,12 +228,10 @@ clara: 19
 indo: 19
 fortuna: 19
 india: 19
-nuestros: 19
 pueda: 19
 estrecho: 19
 tres: 19
 todas: 19
-fuese: 19
 tener: 19
 humana: 18
 imperio: 18
@@ -378,7 +303,6 @@ varios: 16
 campos: 16
 playa: 15
 lusitana: 15
-mis: 15
 enemigo: 15
 eterno: 15
 conocido: 15
@@ -395,9 +319,6 @@ seguro: 15
 cosa: 15
 hermosa: 15
 manera: 15
-nosotros: 15
-nuestro: 15
-tenía: 15
 muro: 15
 daño: 15
 señal: 15
@@ -409,7 +330,6 @@ vió: 15
 según: 15
 damas: 15
 fiera: 15
-suyos: 15
 pedro: 15
 falta: 15
 antigua: 14
@@ -448,7 +368,6 @@ aurora: 13
 gentil: 13
 rayos: 13
 divino: 13
-estaban: 13
 diciendo: 13
 horrendo: 13
 polo: 13
@@ -462,10 +381,8 @@ eterna: 13
 breve: 13
 consigo: 13
 consejo: 13
-estando: 13
 paso: 13
 nadie: 13
-tus: 13
 proa: 13
 nao: 13
 venir: 13
@@ -490,7 +407,6 @@ yugo: 12
 hicieron: 12
 soberano: 12
 sereno: 12
-tuvo: 12
 pasado: 12
 pasados: 12
 extiende: 12
@@ -517,7 +433,6 @@ descubre: 12
 leyes: 12
 huye: 12
 ninguno: 12
-habrá: 12
 salir: 12
 veía: 12
 cruda: 12
@@ -531,7 +446,6 @@ tras: 12
 hará: 12
 mostrando: 11
 empresas: 11
-mí: 11
 torpe: 11
 valeroso: 11
 primer: 11
@@ -545,7 +459,6 @@ ganado: 11
 comienza: 11
 sido: 11
 perdida: 11
-sois: 11
 vencedor: 11
 cuantos: 11
 honras: 11
@@ -553,7 +466,6 @@ ordena: 11
 palma: 11
 lejos: 11
 hallar: 11
-tengo: 11
 firme: 11
 determina: 11
 derrama: 11
@@ -587,7 +499,6 @@ mozo: 11
 portuguesa: 11
 lisboa: 11
 causa: 11
-estado: 11
 hermosas: 11
 hombres: 11
 verás: 11
@@ -629,9 +540,7 @@ hombre: 10
 consiente: 10
 seno: 10
 lugar: 10
-desde: 10
 bando: 10
-tenga: 10
 acompañado: 10
 rayo: 10
 bateles: 10
@@ -643,11 +552,9 @@ mensajero: 10
 años: 10
 mostró: 10
 segundo: 10
-tienes: 10
 verdadero: 10
 soberbio: 10
 soberana: 10
-serán: 10
 extraño: 10
 gesto: 10
 bravo: 10
@@ -686,7 +593,6 @@ nuño: 9
 bandera: 9
 brío: 9
 almas: 9
-sean: 9
 hermoso: 9
 entrada: 9
 amigos: 9
@@ -714,7 +620,6 @@ vive: 9
 nobles: 9
 llaman: 9
 celo: 9
-algunos: 9
 excelentes: 9
 hecha: 9
 señalado: 9
@@ -771,7 +676,6 @@ cielos: 8
 corona: 8
 intento: 8
 largos: 8
-suya: 8
 negro: 8
 entiende: 8
 espesura: 8
@@ -779,7 +683,6 @@ armado: 8
 ofrece: 8
 generoso: 8
 llegada: 8
-siente: 8
 mandado: 8
 muestras: 8
 deseada: 8
@@ -788,7 +691,6 @@ aquellas: 8
 dulces: 8
 cristianos: 8
 pide: 8
-soy: 8
 odio: 8
 forma: 8
 sc: 8
@@ -796,7 +698,6 @@ sé: 8
 podía: 8
 ligero: 8
 correr: 8
-sentido: 8
 mismo: 8
 espera: 8
 buscando: 8
@@ -809,21 +710,17 @@ mirar: 8
 muerto: 8
 ilustres: 8
 mejores: 8
-ante: 8
 verá: 8
-mía: 8
 buen: 8
 daba: 8
 fina: 8
 justicia: 8
 subido: 8
-tendrá: 8
 propio: 8
 cuenta: 8
 prado: 8
 injuria: 8
 alonso: 8
-hubo: 8
 conde: 8
 esperaba: 8
 atreve: 8
@@ -833,9 +730,7 @@ soldados: 8
 doma: 8
 vino: 8
 reina: 8
-haya: 8
 ambos: 8
-vosotros: 8
 presencia: 8
 ojo: 8
 pie: 8
@@ -1001,7 +896,6 @@ hacía: 7
 parientes: 7
 abundantes: 7
 natura: 7
-pero: 7
 ello: 7
 nube: 7
 cristal: 7
@@ -1011,9 +905,7 @@ puertas: 7
 duque: 7
 naires: 7
 cantando: 7
-tuvieron: 6
 musa: 6
-habéis: 6
 cabe: 6
 reparte: 6
 tierno: 6
@@ -1030,7 +922,6 @@ inglaterra: 6
 queréis: 6
 singulares: 6
 pierde: 6
-ese: 6
 dada: 6
 temeroso: 6
 vía: 6
@@ -1116,7 +1007,6 @@ fértil: 6
 adora: 6
 llevan: 6
 bordo: 6
-fuesen: 6
 palo: 6
 llevando: 6
 alimento: 6
@@ -1155,7 +1045,6 @@ pregunta: 6
 hesperia: 6
 sutil: 6
 inclina: 6
-algo: 6
 corriendo: 6
 pujante: 6
 querida: 6
@@ -1190,7 +1079,6 @@ antonio: 6
 entero: 6
 feo: 6
 vicio: 6
-fueran: 6
 francia: 6
 esposas: 6
 defensa: 6
@@ -1215,7 +1103,6 @@ cambaya: 6
 malabares: 6
 llamado: 6
 hacienda: 6
-algunas: 6
 caminos: 5
 memorias: 5
 alejandro: 5
@@ -1228,7 +1115,6 @@ occidente: 5
 pasada: 5
 vituperio: 5
 musas: 5
-vuestras: 5
 césar: 5
 obscurece: 5
 cuarto: 5
@@ -1250,7 +1136,6 @@ llegan: 5
 conformes: 5
 mostraron: 5
 imagina: 5
-tenido: 5
 golpe: 5
 turbado: 5
 aquello: 5
@@ -1344,7 +1229,6 @@ amorosas: 5
 ninguna: 5
 ay: 5
 unas: 5
-suyo: 5
 sosiego: 5
 entrañas: 5
 facundo: 5
@@ -1463,7 +1347,6 @@ rojas: 5
 probar: 5
 negros: 5
 navegar: 5
-tendrán: 5
 tomando: 5
 enamorado: 5
 verán: 5
@@ -1600,7 +1483,6 @@ acabó: 4
 echa: 4
 aparejo: 4
 tornase: 4
-esté: 4
 levante: 4
 necesario: 4
 andaban: 4
@@ -1620,7 +1502,6 @@ puertos: 4
 declara: 4
 propósito: 4
 necesidad: 4
-estará: 4
 segura: 4
 alborotado: 4
 especería: 4
@@ -1660,7 +1541,6 @@ hallara: 4
 rosa: 4
 plática: 4
 futuros: 4
-esos: 4
 soberanos: 4
 escila: 4
 darán: 4
@@ -1707,7 +1587,6 @@ jocundo: 4
 dignos: 4
 soberbios: 4
 pasan: 4
-habido: 4
 diana: 4
 dirá: 4
 helado: 4
@@ -1724,7 +1603,6 @@ lusitania: 4
 descendientes: 4
 ufano: 4
 sagrada: 4
-teniendo: 4
 judea: 4
 sojuzgada: 4
 certeza: 4
@@ -1808,7 +1686,6 @@ experiencia: 4
 provincia: 4
 conocer: 4
 convierte: 4
-tenéis: 4
 vasallos: 4
 mozos: 4
 suben: 4
@@ -1837,7 +1714,6 @@ mañas: 4
 comercio: 4
 pregona: 4
 caminando: 4
-serás: 4
 parecen: 4
 artes: 4
 veneranda: 4
@@ -1874,7 +1750,6 @@ palacio: 4
 vasco: 4
 dones: 4
 hallan: 4
-eso: 4
 juegos: 4
 manjares: 4
 dejan: 4
@@ -1929,7 +1804,6 @@ troyano: 3
 tagides: 3
 dadme: 3
 estilo: 3
-nuestras: 3
 sonorosa: 3
 silvestre: 3
 inflama: 3
@@ -1937,7 +1811,6 @@ universo: 3
 maravilla: 3
 regalado: 3
 tomado: 3
-seréis: 3
 ismaelita: 3
 turco: 3
 tamañas: 3
@@ -1948,7 +1821,6 @@ amados: 3
 alburquerque: 3
 rendir: 3
 cantar: 3
-tengan: 3
 veros: 3
 dote: 3
 esperan: 3
@@ -1993,7 +1865,6 @@ braveza: 3
 entendido: 3
 obligaba: 3
 yelmo: 3
-eres: 3
 pase: 3
 resolución: 3
 echada: 3
@@ -2007,12 +1878,10 @@ paños: 3
 algodón: 3
 arriba: 3
 males: 3
-habían: 3
 recibía: 3
 hinchen: 3
 vasos: 3
 echan: 3
-hemos: 3
 navegado: 3
 calisto: 3
 extranjeros: 3
@@ -2041,7 +1910,6 @@ risa: 3
 fingimiento: 3
 aprometiendo: 3
 siga: 3
-tuviera: 3
 rindiera: 3
 poquitos: 3
 horas: 3
@@ -2199,7 +2067,6 @@ diferente: 3
 resonando: 3
 espantado: 3
 tome: 3
-tuviste: 3
 miseria: 3
 probado: 3
 vivirá: 3
@@ -2272,7 +2139,6 @@ cobrar: 3
 filo: 3
 descuidado: 3
 infantes: 3
-sintiendo: 3
 repente: 3
 cura: 3
 súbito: 3
@@ -2312,7 +2178,6 @@ lucientes: 3
 sublima: 3
 entienda: 3
 riendo: 3
-suyas: 3
 gigante: 3
 arrogante: 3
 espadas: 3
@@ -2427,11 +2292,9 @@ cargado: 3
 anteón: 3
 pasamos: 3
 norte: 3
-habíamos: 3
 salada: 3
 golfo: 3
 ignorante: 3
-estuvo: 3
 sanos: 3
 juno: 3
 cuentan: 3
@@ -2480,7 +2343,6 @@ masa: 3
 conchas: 3
 verdes: 3
 palas: 3
-sería: 3
 abaja: 3
 venido: 3
 bengala: 3
@@ -2517,7 +2379,6 @@ jerusalén: 3
 homicida: 3
 haced: 3
 multiplica: 3
-hubiera: 3
 índico: 3
 punta: 3
 embajada: 3
@@ -2614,7 +2475,6 @@ miradlo: 2
 realeza: 2
 contemplo: 2
 indicio: 2
-tendréis: 2
 vais: 2
 patrios: 2
 valerosos: 2
@@ -2767,12 +2627,10 @@ fragua: 2
 llevado: 2
 despedido: 2
 urdía: 2
-hayan: 2
 belicosas: 2
 obscurezca: 2
 felipe: 2
 sangrienta: 2
-tendré: 2
 fabricado: 2
 indignado: 2
 trabar: 2
@@ -3058,7 +2916,6 @@ medicina: 2
 dafne: 2
 genealogía: 2
 mandas: 2
-seré: 2
 quedará: 2
 austral: 2
 mediterrano: 2
@@ -3093,7 +2950,6 @@ come: 2
 decreto: 2
 dejarlos: 2
 casado: 2
-hubiese: 2
 agar: 2
 pruebe: 2
 ilustrase: 2
@@ -3150,7 +3006,6 @@ ennoblecido: 2
 juntó: 2
 conocidas: 2
 encendiendo: 2
-eras: 2
 edificada: 2
 dardania: 2
 enviada: 2
@@ -3251,7 +3106,6 @@ permisión: 2
 torna: 2
 muerta: 2
 profano: 2
-estabas: 2
 enjuto: 2
 volaban: 2
 señoras: 2
@@ -3267,7 +3121,6 @@ brutas: 2
 rapiñas: 2
 niños: 2
 sentimiento: 2
-estoy: 2
 clemencia: 2
 perderla: 2
 inocencia: 2
@@ -3326,7 +3179,6 @@ sintiese: 2
 oyese: 2
 respeto: 2
 cuándo: 2
-hubieron: 2
 duelos: 2
 tomad: 2
 trueca: 2
@@ -3453,7 +3305,6 @@ lento: 2
 cursos: 2
 lástimas: 2
 vimos: 2
-fuimos: 2
 dejamos: 2
 inopia: 2
 recibieron: 2
@@ -3635,7 +3486,6 @@ ropas: 2
 galán: 2
 moderno: 2
 yelmos: 2
-tenían: 2
 diferencia: 2
 querría: 2
 ganados: 2
@@ -3703,7 +3553,6 @@ papa: 2
 desusada: 2
 general: 2
 vii: 2
-tuyo: 2
 carlos: 2
 causas: 2
 ocio: 2
@@ -3789,7 +3638,6 @@ avisa: 2
 edifica: 2
 insigne: 2
 aprieto: 2
-esas: 2
 maneras: 2
 coronas: 2
 dejemos: 2
@@ -3891,7 +3739,6 @@ vinos: 2
 celebre: 2
 gallardo: 2
 deleitosa: 2
-habiendo: 2
 citerea: 2
 pintando: 2
 donceles: 2
@@ -3966,7 +3813,6 @@ enseñando: 2
 serviros: 2
 cumplir: 2
 cinosura: 2
-esa: 2
 afamada: 2
 potentes: 2
 creído: 2
@@ -3990,7 +3836,6 @@ siguieron: 1
 cállese: 1
 obedecieron: 1
 cese: 1
-vosotras: 1
 grandílocuo: 1
 envidien: 1
 hipocrene: 1
@@ -4144,7 +3989,6 @@ guinea: 1
 inhabitada: 1
 cercan: 1
 hinchada: 1
-tendrían: 1
 estrechas: 1
 estera: 1
 cosechas: 1
@@ -4225,7 +4069,6 @@ peleaban: 1
 descubriré: 1
 perezoso: 1
 caspio: 1
-tuve: 1
 busco: 1
 visible: 1
 invisible: 1
@@ -4437,7 +4280,6 @@ palomica: 1
 fénix: 1
 cayeron: 1
 refirieron: 1
-sentidos: 1
 pancaya: 1
 embustero: 1
 artero: 1
@@ -4657,7 +4499,6 @@ busiris: 1
 endiablado: 1
 huésped: 1
 sacrificaba: 1
-tendrás: 1
 luciendo: 1
 regalará: 1
 laso: 1
@@ -4749,7 +4590,6 @@ obedecieren: 1
 corrieren: 1
 gobernando: 1
 quitad: 1
-tengáis: 1
 imprima: 1
 faltó: 1
 conservar: 1
@@ -4857,7 +4697,6 @@ helaba: 1
 inusitado: 1
 terror: 1
 deleitaba: 1
-habidas: 1
 vecinos: 1
 contad: 1
 moráis: 1
@@ -5106,7 +4945,6 @@ mafra: 1
 sojuzga: 1
 escondidas: 1
 enreda: 1
-fuiste: 1
 rindes: 1
 ayudada: 1
 septentrión: 1
@@ -5559,7 +5397,6 @@ compelidos: 1
 jurar: 1
 romanas: 1
 dejarían: 1
-tuviesen: 1
 enristrada: 1
 arzones: 1
 abierta: 1
@@ -5877,7 +5714,6 @@ vejez: 1
 ánima: 1
 funéreo: 1
 enterramiento: 1
-seas: 1
 esposo: 1
 aventuráis: 1
 mia: 1
@@ -5914,7 +5750,6 @@ vanidad: 1
 gustosa: 1
 enfrascas: 1
 despreciar: 1
-tenida: 1
 temiera: 1
 redentor: 1
 peleas: 1
@@ -6106,7 +5941,6 @@ bermeja: 1
 salvamento: 1
 recogimos: 1
 bestial: 1
-tuvimos: 1
 convenir: 1
 preguntóle: 1
 estándose: 1
@@ -6221,7 +6055,6 @@ abrazado: 1
 hallé: 1
 apretaba: 1
 quebrado: 1
-fueses: 1
 viniéndome: 1
 partí: 1
 riese: 1
@@ -6331,7 +6164,6 @@ casillas: 1
 labradas: 1
 alcanzamos: 1
 exento: 1
-hubimos: 1
 ramnusia: 1
 mezcló: 1
 nacimos: 1
@@ -6560,7 +6392,6 @@ juro: 1
 permites: 1
 límites: 1
 chica: 1
-hayáis: 1
 vivido: 1
 grado: 1
 endurecidos: 1
@@ -6568,7 +6399,6 @@ atrevidos: 1
 acometieron: 1
 tentar: 1
 soberbias: 1
-mío: 1
 sojuzgando: 1
 estatutos: 1
 quebrando: 1
@@ -6669,7 +6499,6 @@ agraviadas: 1
 servidas: 1
 embajadores: 1
 cartas: 1
-sentidas: 1
 agravio: 1
 sabedores: 1
 encarecidas: 1
@@ -7096,7 +6925,6 @@ conociera: 1
 bebiendo: 1
 femenino: 1
 incontinente: 1
-tendría: 1
 competencia: 1
 volteaban: 1
 sojuzgaban: 1
@@ -7299,7 +7127,6 @@ juró: 1
 cumple: 1
 celebrar: 1
 reservando: 1
-tuvieran: 1
 desbarataba: 1
 supieran: 1
 explicables: 1
@@ -7537,7 +7364,6 @@ aries: 1
 vine: 1
 certifico: 1
 creíble: 1
-estuvieras: 1
 vieras: 1
 demande: 1
 propusieron: 1
@@ -7851,7 +7677,6 @@ cadenas: 1
 aciertan: 1
 desordenados: 1
 desconcertados: 1
-estados: 1
 mozas: 1
 biblis: 1
 cinerea: 1
@@ -8237,7 +8062,6 @@ cambalón: 1
 llamará: 1
 bipur: 1
 tanor: 1
-estarán: 1
 desbaratando: 1
 admirado: 1
 votos: 1
@@ -8425,7 +8249,6 @@ cándace: 1
 aquico: 1
 vengará: 1
 tresdoblado: 1
-estás: 1
 tornado: 1
 escogiste: 1
 mandarás: 1
@@ -8745,7 +8568,6 @@ favorezcas: 1
 ofrezcas: 1
 usurpáis: 1
 enviados: 1
-estáis: 1
 deslumbrados: 1
 podrís: 1
 profetas: 1
@@ -8888,7 +8710,6 @@ orar: 1
 disciplina: 1
 ayuno: 1
 comunes: 1
-tened: 1
 intrépida: 1
 aumentan: 1
 digan: 1
