@@ -31,6 +31,9 @@ def lossyCount(file, epsilon=0.001):
             # decrement all counters by 1 and remove items ≤ 0
             word_count = {w: c-1 for w, c in word_count.items() if c > 1}
     
+    # remove items from final bucket
+    word_count = {w: c for w, c in word_count.items() if c > 1}
+    
     sorted_words = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
     
     stats_file = os.path.join("streaming_stats", os.path.basename(file))
