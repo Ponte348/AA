@@ -7,15 +7,13 @@ from collections import defaultdict
 def probabilisticDecreasingCount(file, num_runs=10):
     print(f"Probabilistic decreasing count for {file} ({num_runs} runs)")
     
-    # Read file once
     with open(file, 'r') as f:
         text = f.read()
         lines = [line for line in text.splitlines() if line.strip()]
     
     words = ' '.join(lines).split()
-    total_counts = defaultdict(float)  # Use float for averaging
+    total_counts = defaultdict(float)  # use float for averaging
     
-    # Run multiple times
     for run in range(num_runs):
         word_count = {}
         
@@ -27,18 +25,16 @@ def probabilisticDecreasingCount(file, num_runs=10):
             else:
                 word_count[word] = 1
                 
-        # Add this run's counts to total
         for word, count in word_count.items():
             total_counts[word] += count
     
-    # Calculate averages
+    # averages
     avg_counts = {word: count/num_runs for word, count in total_counts.items()}
     sorted_words = sorted(avg_counts.items(), key=lambda x: x[1], reverse=True)
     
-    # Create directory if it doesn't exist
+    # create directory just in case it doesn't exist
     os.makedirs("prob_decreasing_stats", exist_ok=True)
     
-    # Save results
     stats_file = os.path.join("prob_decreasing_stats", os.path.basename(file))
     with open(stats_file, 'w') as f:
         f.write(f"Probabilistic decreasing count results (averaged over {num_runs} runs)\n")
