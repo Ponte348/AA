@@ -17,6 +17,7 @@
 
 ## Extra
 Cardinality, number of distinct items (topic of last class)
+Use bloom filters to estimate the number of distinct items
 
 ## Tips
 Create tables to show word counts, it's better than graphics
