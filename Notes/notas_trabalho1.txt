@@ -1,3 +1,0 @@
-fazer vários testes variando aumentando o número de vértices e de arestas e fazer gráficos
-tentar primeiro à mão e resolver a papel
-como usa sets deve ser exponencial (supostamente)
